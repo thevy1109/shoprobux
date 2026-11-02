@@ -101,8 +101,18 @@
                     <span class="text-xs text-emerald-400 bg-emerald-950/50 border border-emerald-800/50 px-2 py-0.5 rounded-full font-medium">Đã chọn</span>
                 </div>
 
-                <div id="gameSelectorList" class="space-y-2.5 max-h-[300px] overflow-y-auto custom-scrollbar pr-1">
-                    <!-- Dynamic Game Items inserted via JS -->
+                <div id="gameSelectorList" class="space-y-2.5">
+                    <!-- Fixed single game option: Roblox / Nạp KC X5 -->
+                    <div class="flex items-center justify-between p-3 rounded-xl border bg-red-950/40 border-vngRed shadow-md">
+                        <div class="flex items-center gap-3">
+                            <img src="https://placehold.co/100x100/d91b26/ffffff?text=Roblox" class="w-10 h-10 rounded-lg object-cover border border-gray-700" alt="Roblox">
+                            <div>
+                                <div class="text-sm font-bold text-white">Roblox / Nạp KC X5</div>
+                                <div class="text-[11px] text-gray-400">VNG Games</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-circle-check text-vngRed text-lg"></i>
+                    </div>
                 </div>
             </div>
 
@@ -386,16 +396,7 @@
     </div>
 
     <script>
-        // Data Store for Games & Packages
-        const gamesData = [
-            { id: 'roblox', name: 'Roblox / Nạp KC X5', publisher: 'VNG Games', thumb: 'https://placehold.co/100x100/d91b26/ffffff?text=Roblox', active: true },
-            { id: 'vltkm', name: 'Võ Lâm Truyền Kỳ Mobile', publisher: 'VNGGames', thumb: 'https://placehold.co/100x100/b5141e/ffffff?text=VLTK', active: false },
-            { id: 'pubg', name: 'PUBG Mobile VN', publisher: 'VNG / Tencent', thumb: 'https://placehold.co/100x100/eab308/ffffff?text=PUBG', active: false },
-            { id: 'lienminh', name: 'Tốc Chiến / LMHT: Tốc Chiến', publisher: 'Riot & VNG', thumb: 'https://placehold.co/100x100/3b82f6/ffffff?text=WILD', active: false },
-            { id: 'zingplay', name: 'ZingPlay Portal (Tiến Lên, Bầu Cua)', publisher: 'ZingPlay', thumb: 'https://placehold.co/100x100/10b981/ffffff?text=ZPlay', active: false },
-            { id: 'gunny', name: 'Gunny Origin', publisher: 'VNGGames', thumb: 'https://placehold.co/100x100/ec4899/ffffff?text=Gunny', active: false }
-        ];
-
+        // Data Store for Packages (Roblox only)
         const packagesData = {
             roblox: [
                 { id: 'p1', name: 'Gói Trải Nghiệm', currency: '110 Kim Cương', bonus: '+ 110 (X5 Khuyến Mãi)', price: '10.000 đ', rawPrice: 10000, hot: false },
@@ -404,14 +405,6 @@
                 { id: 'p4', name: 'Gói Đại Gia', currency: '2.500 Kim Cương', bonus: '+ 2,500 (X5 Khuyến Mãi)', price: '200.000 đ', rawPrice: 200000, hot: true },
                 { id: 'p5', name: 'Gói VIP Hoàng Gia', currency: '6.500 Kim Cương', bonus: '+ 6,500 (X5 Khuyến Mãi)', price: '500.000 đ', rawPrice: 500000, hot: false },
                 { id: 'p6', name: 'Gói Siêu Cấp VNG', currency: '14.000 Kim Cương', bonus: '+ 14,000 (X5 Khuyến Mãi)', price: '1.000.000 đ', rawPrice: 1000000, hot: false }
-            ],
-            vltkm: [
-                { id: 'v1', name: '100 Nguyên Bảo', bonus: '+100 Khởi Đầu', price: '20.000 đ', rawPrice: 20000, hot: false },
-                { id: 'v2', name: '500 Nguyên Bảo', bonus: '+500 Tặng Thêm', price: '100.000 đ', rawPrice: 100000, hot: true },
-                { id: 'v3', name: '1,500 Nguyên Bảo', bonus: '+1,500 Ưu Đãi', price: '300.000 đ', rawPrice: 300000, hot: false },
-                { id: 'v4', name: '3,000 Nguyên Bảo', bonus: '+3,000 Siêu Hot', price: '500.000 đ', rawPrice: 500000, hot: true },
-                { id: 'v5', name: '6,500 Nguyên Bảo', bonus: '+6,500 Quà Đại Hiệp', price: '1.000.000 đ', rawPrice: 1000000, hot: false },
-                { id: 'v6', name: '15,000 Nguyên Bảo', bonus: '+15,000 Bá Chủ', price: '2.500.000 đ', rawPrice: 2500000, hot: false }
             ]
         };
 
@@ -421,35 +414,7 @@
 
         // Initialize App
         function initApp() {
-            renderGameSelector();
             renderPackages(selectedGameId);
-        }
-
-        function renderGameSelector() {
-            const container = document.getElementById('gameSelectorList');
-            container.innerHTML = gamesData.map(game => `
-                <div onclick="selectGame('${game.id}')" class="flex items-center justify-between p-3 rounded-xl cursor-pointer transition border ${game.id === selectedGameId ? 'bg-red-950/40 border-vngRed shadow-md' : 'bg-[#141417] border-gray-800 hover:border-gray-700'}">
-                    <div class="flex items-center gap-3">
-                        <img src="${game.thumb}" class="w-10 h-10 rounded-lg object-cover border border-gray-700" alt="${game.name}">
-                        <div>
-                            <div class="text-sm font-bold text-white">${game.name}</div>
-                            <div class="text-[11px] text-gray-400">${game.publisher}</div>
-                        </div>
-                    </div>
-                    ${game.id === selectedGameId ? '<i class="fa-solid fa-circle-check text-vngRed text-lg"></i>' : '<i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>'}
-                </div>
-            `).join('');
-        }
-
-        function selectGame(gameId) {
-            selectedGameId = gameId;
-            const game = gamesData.find(g => g.id === gameId);
-            if (game) {
-                document.getElementById('selectedGameThumb').src = game.thumb;
-                document.getElementById('selectedGameNameLabel').innerText = game.name;
-            }
-            renderGameSelector();
-            renderPackages(gameId);
         }
 
         function renderPackages(gameId) {
