@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cổng Thanh Toán Chính Thức | VNG Games & ZingPlay</title>
+    <title>Cổng Thanh Toán Chính Thức Roblox | VNG Games</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -39,7 +39,7 @@
     <!-- Top Notification Bar -->
     <div class="bg-gradient-to-r from-red-900 via-vngRed to-red-900 text-white text-xs font-medium py-1.5 px-4 text-center tracking-wide flex items-center justify-center gap-2 shadow-md">
         <i class="fa-solid fa-bullhorn text-yellow-300 animate-bounce"></i>
-        <span>Sự kiện nạp lần đầu nhân đôi Kim Cương (X5) toàn bộ các tựa game VNG & ZingPlay áp dụng đến hết tháng!</span>
+        <span>Sự kiện nạp Robux chính thức qua cổng VNG Games • Chiết khấu ưu đãi ZaloPay giảm ngay 5%!</span>
     </div>
 
     <!-- Main Header -->
@@ -53,7 +53,7 @@
                         <span class="text-xs bg-black/30 px-1.5 py-0.5 rounded uppercase font-semibold">Pay</span>
                     </div>
                     <div class="hidden sm:block border-l border-gray-700 pl-3">
-                        <h1 class="font-bold text-sm text-gray-200">Cổng Thanh Toán</h1>
+                        <h1 class="font-bold text-sm text-gray-200">Cổng Thanh Toán Roblox</h1>
                         <p class="text-xs text-gray-400">Hệ thống nạp thẻ chính thức</p>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
         <!-- Left Column: Step Navigation & Game/Server Selection -->
         <div class="lg:col-span-4 space-y-6">
             
-            <!-- Step 1: Select Game -->
+            <!-- Step 1: Select Game (Roblox only) -->
             <div class="bg-[#1e1e24] border border-gray-800 rounded-2xl p-5 shadow-xl">
                 <div class="flex items-center justify-between mb-4">
                     <h2 class="text-base font-bold text-white flex items-center gap-2">
@@ -101,14 +101,15 @@
                     <span class="text-xs text-emerald-400 bg-emerald-950/50 border border-emerald-800/50 px-2 py-0.5 rounded-full font-medium">Đã chọn</span>
                 </div>
 
-                <div id="gameSelectorList" class="space-y-2.5">
-                    <!-- Fixed single game option: Roblox / Nạp KC X5 -->
-                    <div class="flex items-center justify-between p-3 rounded-xl border bg-red-950/40 border-vngRed shadow-md">
+                <div class="space-y-2.5">
+                    <div class="flex items-center justify-between p-3.5 rounded-xl border bg-red-950/40 border-vngRed shadow-md">
                         <div class="flex items-center gap-3">
-                            <img src="https://placehold.co/100x100/d91b26/ffffff?text=Roblox" class="w-10 h-10 rounded-lg object-cover border border-gray-700" alt="Roblox">
+                            <div class="w-10 h-10 rounded-lg bg-vngRed text-white flex items-center justify-center font-black text-lg shadow">
+                                <i class="fa-solid fa-cube"></i>
+                            </div>
                             <div>
-                                <div class="text-sm font-bold text-white">Roblox / Nạp KC X5</div>
-                                <div class="text-[11px] text-gray-400">VNG Games</div>
+                                <div class="text-sm font-bold text-white">Roblox</div>
+                                <div class="text-[11px] text-gray-400">VNG Games Official Partner</div>
                             </div>
                         </div>
                         <i class="fa-solid fa-circle-check text-vngRed text-lg"></i>
@@ -121,26 +122,24 @@
                 <div class="flex items-center justify-between mb-4">
                     <h2 class="text-base font-bold text-white flex items-center gap-2">
                         <span class="w-6 h-6 rounded-full bg-vngRed text-white text-xs flex items-center justify-center font-bold">2</span>
-                        Thông Tin Nhân Vật
+                        Thông Tin Tài Khoản Roblox
                     </h2>
                 </div>
 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Máy Chủ (Server)</label>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Khu Vực / Máy Chủ</label>
                         <select id="serverSelect" class="w-full bg-[#141417] border border-gray-700 rounded-xl px-3.5 py-2.5 text-sm font-medium text-white focus:outline-none focus:border-vngRed transition">
-                            <option value="S1">S1 - Thiên Long (Khuyên dùng)</option>
-                            <option value="S2">S2 - Kiếm Thế</option>
-                            <option value="S3">S3 - Võ Lâm Kỳ Hiệp</option>
-                            <option value="S4">S4 - Hỏa Long</option>
-                            <option value="SV-VIP">SV-VIP [Exclusive]</option>
+                            <option value="Global">Global / Quốc Tế (Khuyên dùng)</option>
+                            <option value="VN">Việt Nam Server</option>
+                            <option value="Asia">Asia Region</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Nhân vật / ID Tài khoản nhận</label>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Tên người dùng hoặc ID Roblox</label>
                         <div class="relative">
-                            <input type="text" id="characterInput" value="VNG_Master99" class="w-full bg-[#141417] border border-gray-700 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-white focus:outline-none focus:border-vngRed transition" placeholder="Nhập tên nhân vật hoặc ID...">
+                            <input type="text" id="characterInput" value="RobloxPlayer_VNG" class="w-full bg-[#141417] border border-gray-700 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-white focus:outline-none focus:border-vngRed transition" placeholder="Nhập username hoặc ID...">
                             <div class="absolute right-3 top-2.5 text-xs text-emerald-400 bg-emerald-950/80 px-2 py-1 rounded font-bold border border-emerald-800/50 flex items-center gap-1">
                                 <i class="fa-solid fa-check"></i> Hợp lệ
                             </div>
@@ -148,12 +147,12 @@
                     </div>
 
                     <div class="bg-gray-900/60 p-3 rounded-xl border border-gray-800 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-gray-800 overflow-hidden flex items-center justify-center border border-gray-700 shrink-0">
-                            <img id="selectedGameThumb" src="https://placehold.co/100x100/d91b26/ffffff?text=Game" alt="Game" class="w-full h-full object-cover">
+                        <div class="w-10 h-10 rounded-lg bg-gray-800 overflow-hidden flex items-center justify-center border border-gray-700 shrink-0 text-vngRed">
+                            <i class="fa-solid fa-gamepad text-xl"></i>
                         </div>
                         <div class="overflow-hidden">
-                            <div class="text-xs text-gray-400">Đang nạp vào:</div>
-                            <div id="selectedGameNameLabel" class="text-sm font-bold text-white truncate">Roblox / Kim Cương X5</div>
+                            <div class="text-xs text-gray-400">Đang nạp vào tài khoản:</div>
+                            <div id="selectedGameNameLabel" class="text-sm font-bold text-white truncate">Roblox (VNG Partner)</div>
                         </div>
                     </div>
                 </div>
@@ -169,10 +168,10 @@
                 <div class="flex items-center justify-between mb-5">
                     <h2 class="text-lg font-bold text-white flex items-center gap-2.5">
                         <span class="w-7 h-7 rounded-full bg-vngRed text-white text-sm flex items-center justify-center font-bold">3</span>
-                        Chọn Gói Nạp & Mức Giá
+                        Chọn Gói Nạp Robux
                     </h2>
                     <span class="text-xs text-yellow-400 bg-yellow-950/40 border border-yellow-700/40 px-3 py-1 rounded-lg font-semibold flex items-center gap-1.5">
-                        <i class="fa-solid fa-fire text-vngRed"></i> Khuyến mãi X5 kim cương đầu
+                        <i class="fa-solid fa-bolt text-vngRed"></i> Cộng Robux tự động tức thì
                     </span>
                 </div>
 
@@ -248,7 +247,7 @@
                         <div class="text-xs text-gray-400 mb-1">Tổng tiền thanh toán thực tế:</div>
                         <div class="flex items-baseline gap-2">
                             <span id="summaryPrice" class="text-2xl sm:text-3xl font-extrabold text-vngRed">50.000 đ</span>
-                            <span class="text-xs text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded font-bold">Nhận <span id="summaryCurrency">550</span> Kim Cương (X5)</span>
+                            <span class="text-xs text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded font-bold">Nhận <span id="summaryCurrency">550 Robux</span></span>
                         </div>
                     </div>
 
@@ -272,7 +271,7 @@
                 <a href="#" class="hover:text-vngRed transition">Hỗ trợ khách hàng</a>
                 <a href="#" class="hover:text-vngRed transition">Trung tâm nạp thẻ VNG</a>
             </div>
-            <p>© 2026 VNG Corporation. All rights reserved. Giấy phép cung cấp dịch vụ trò chơi điện tử G1 trên mạng số...</p>
+            <p>© 2026 VNG Corporation. All rights reserved. Cổng nạp Robux chính thức ủy quyền tại Việt Nam.</p>
         </div>
     </footer>
 
@@ -287,7 +286,7 @@
                     VNG
                 </div>
                 <h3 class="text-xl font-bold text-white">Đăng Nhập Tài Khoản VNG</h3>
-                <p class="text-xs text-gray-400 mt-1">Chọn phương thức đăng nhập để nạp thẻ an toàn</p>
+                <p class="text-xs text-gray-400 mt-1">Chọn phương thức đăng nhập để nạp Robux an toàn</p>
             </div>
 
             <div class="space-y-3 mb-6">
@@ -322,7 +321,7 @@
 
             <div class="mt-4 grid grid-cols-3 gap-2">
                 <button onclick="simulateQuickLogin('Zalo')" class="bg-[#141417] hover:bg-gray-800 border border-gray-700 py-2.5 rounded-xl text-xs font-semibold text-white flex items-center justify-center gap-1.5 transition">
-                    <i class="fa-solid fa-z text-blue-400">></i> Zalo
+                    <i class="fa-solid fa-z text-blue-400"></i> Zalo
                 </button>
                 <button onclick="simulateQuickLogin('Facebook')" class="bg-[#141417] hover:bg-gray-800 border border-gray-700 py-2.5 rounded-xl text-xs font-semibold text-white flex items-center justify-center gap-1.5 transition">
                     <i class="fa-brands fa-facebook text-blue-500"></i> Facebook
@@ -352,7 +351,7 @@
         <div class="bg-[#1e1e24] border border-gray-800 rounded-3xl w-full max-w-xl p-6 sm:p-8 shadow-2xl relative">
             <div class="flex items-center justify-between mb-4">
                 <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-clock-rotate-left text-vngRed"></i> Lịch Sử Giao Dịch Gần Đây
+                    <i class="fa-solid fa-clock-rotate-left text-vngRed"></i> Lịch Sử Giao Dịch Robux
                 </h3>
                 <button onclick="closeHistoryModal()" class="text-gray-400 hover:text-white bg-gray-800 w-8 h-8 rounded-full flex items-center justify-center">
                     <i class="fa-solid fa-xmark"></i>
@@ -362,21 +361,21 @@
             <div class="space-y-3 max-h-[350px] overflow-y-auto custom-scrollbar pr-1">
                 <div class="bg-gray-900/60 p-3.5 rounded-xl border border-gray-800 flex items-center justify-between text-left">
                     <div>
-                        <div class="text-sm font-bold text-white">Nạp 1,200 Kim Cương (Roblox)</div>
+                        <div class="text-sm font-bold text-white">Nạp 1,150 Robux (Roblox)</div>
                         <div class="text-xs text-gray-400">03/06/2026 - 14:20 • ZaloPay</div>
                     </div>
                     <div class="text-right">
-                        <div class="text-sm font-bold text-emerald-400">+100.000 đ</div>
+                        <div class="text-sm font-bold text-emerald-400">100.000 đ</div>
                         <span class="text-[10px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded font-bold border border-emerald-800">Thành công</span>
                     </div>
                 </div>
                 <div class="bg-gray-900/60 p-3.5 rounded-xl border border-gray-800 flex items-center justify-between text-left">
                     <div>
-                        <div class="text-sm font-bold text-white">Nạp 550 Kim Cương (Võ Lâm Truyền Kỳ)</div>
+                        <div class="text-sm font-bold text-white">Nạp 550 Robux (Roblox)</div>
                         <div class="text-xs text-gray-400">01/06/2026 - 09:15 • QR Code</div>
                     </div>
                     <div class="text-right">
-                        <div class="text-sm font-bold text-emerald-400">+50.000 đ</div>
+                        <div class="text-sm font-bold text-emerald-400">50.000 đ</div>
                         <span class="text-[10px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded font-bold border border-emerald-800">Thành công</span>
                     </div>
                 </div>
@@ -396,58 +395,50 @@
     </div>
 
     <script>
-        // Data Store for Packages (Roblox only)
-        const packagesData = {
-            roblox: [
-                { id: 'p1', name: 'Gói Trải Nghiệm', currency: '110 Kim Cương', bonus: '+ 110 (X5 Khuyến Mãi)', price: '10.000 đ', rawPrice: 10000, hot: false },
-                { id: 'p2', name: 'Gói Tiêu Chuẩn', currency: '550 Kim Cương', bonus: '+ 550 (X5 Khuyến Mãi)', price: '50.000 đ', rawPrice: 50000, hot: true },
-                { id: 'p3', name: 'Gói Phổ Thông', currency: '1.150 Kim Cương', bonus: '+ 1,150 (X5 Khuyến Mãi)', price: '100.000 đ', rawPrice: 100000, hot: false },
-                { id: 'p4', name: 'Gói Đại Gia', currency: '2.500 Kim Cương', bonus: '+ 2,500 (X5 Khuyến Mãi)', price: '200.000 đ', rawPrice: 200000, hot: true },
-                { id: 'p5', name: 'Gói VIP Hoàng Gia', currency: '6.500 Kim Cương', bonus: '+ 6,500 (X5 Khuyến Mãi)', price: '500.000 đ', rawPrice: 500000, hot: false },
-                { id: 'p6', name: 'Gói Siêu Cấp VNG', currency: '14.000 Kim Cương', bonus: '+ 14,000 (X5 Khuyến Mãi)', price: '1.000.000 đ', rawPrice: 1000000, hot: false }
-            ]
-        };
+        // Exact Package Data requested for Roblox
+        const robloxPackages = [
+            { id: 'p1', name: 'Gói Tiêu Chuẩn', robux: '550 Robux', price: '50.000 đ', rawPrice: 50000, hot: false },
+            { id: 'p2', name: 'Gói Phổ Thông', robux: '1.150 Robux', price: '100.000 đ', rawPrice: 100000, hot: true },
+            { id: 'p3', name: 'Gói Đại Gia', robux: '2.500 Robux', price: '200.000 đ', rawPrice: 200000, hot: false },
+            { id: 'p4', name: 'Gói VIP Hoàng Gia', robux: '6.500 Robux', price: '500.000 đ', rawPrice: 500000, hot: true },
+            { id: 'p5', name: 'Gói Siêu Cấp VNG', robux: '14.000 Robux', price: '1.000.000 đ', rawPrice: 1000000, hot: false }
+        ];
 
-        let selectedGameId = 'roblox';
         let selectedPackage = null;
         let selectedPayment = 'zalopay';
 
         // Initialize App
         function initApp() {
-            renderPackages(selectedGameId);
+            renderPackages();
         }
 
-        function renderPackages(gameId) {
-            const pkgs = packagesData[gameId] || packagesData['roblox'];
+        function renderPackages() {
             const container = document.getElementById('packageGrid');
-            container.innerHTML = pkgs.map((pkg, idx) => `
-                <div onclick="selectPkg('${pkg.id}')" id="pkg-${pkg.id}" class="pkg-card relative cursor-pointer bg-[#141417] border-2 ${idx === 1 ? 'border-vngRed bg-red-950/10' : 'border-gray-800 hover:border-gray-700'} rounded-2xl p-4 flex flex-col justify-between transition group">
-                    ${pkg.hot ? '<span class="absolute -top-2.5 right-3 bg-vngRed text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-md uppercase tracking-wider">Hot X5</span>' : ''}
+            container.innerHTML = robloxPackages.map((pkg, idx) => `
+                <div onclick="selectPkg('${pkg.id}')" id="pkg-${pkg.id}" class="pkg-card relative cursor-pointer bg-[#141417] border-2 ${idx === 0 ? 'border-vngRed bg-red-950/10' : 'border-gray-800 hover:border-gray-700'} rounded-2xl p-4 flex flex-col justify-between transition group">
+                    ${pkg.hot ? '<span class="absolute -top-2.5 right-3 bg-vngRed text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-md uppercase tracking-wider">Hot Deals</span>' : ''}
                     <div>
                         <div class="text-xs font-semibold text-gray-400 mb-1">${pkg.name}</div>
-                        <div class="text-base font-extrabold text-white group-hover:text-red-400 transition">${pkg.currency || pkg.bonus}</div>
-                        <div class="text-xs text-emerald-400 font-medium mt-1">${pkg.bonus}</div>
+                        <div class="text-lg font-extrabold text-white group-hover:text-red-400 transition">${pkg.robux}</div>
+                        <div class="text-[11px] text-emerald-400 font-medium mt-1">Cập nhật lập tức vào tài khoản</div>
                     </div>
                     <div class="mt-4 pt-3 border-t border-gray-800/80 flex items-center justify-between">
                         <span class="text-sm font-extrabold text-vngRed">${pkg.price}</span>
-                        <div class="radio-indicator w-5 h-5 rounded-full border border-gray-600 flex items-center justify-center ${idx === 1 ? 'bg-vngRed border-vngRed text-white' : ''}">
-                            <i class="fa-solid fa-check text-[10px] ${idx === 1 ? '' : 'opacity-0'}"></i>
+                        <div class="radio-indicator w-5 h-5 rounded-full border border-gray-600 flex items-center justify-center ${idx === 0 ? 'bg-vngRed border-vngRed text-white' : ''}">
+                            <i class="fa-solid fa-check text-[10px] ${idx === 0 ? '' : 'opacity-0'}"></i>
                         </div>
                     </div>
                 </div>
             `).join('');
             
-            // Auto select first package or default hot package
-            selectedPackage = pkgs[1] || pkgs[0];
+            selectedPackage = robloxPackages[0];
             updateSummary();
         }
 
         function selectPkg(pkgId) {
-            const pkgs = packagesData[selectedGameId] || packagesData['roblox'];
-            selectedPackage = pkgs.find(p => p.id === pkgId);
+            selectedPackage = robloxPackages.find(p => p.id === pkgId);
             
-            // Update visual active state
-            pkgs.forEach(p => {
+            robloxPackages.forEach(p => {
                 const el = document.getElementById(`pkg-${p.id}`);
                 const ind = el.querySelector('.radio-indicator');
                 const icon = ind.querySelector('i');
@@ -469,7 +460,7 @@
         function updateSummary() {
             if (!selectedPackage) return;
             document.getElementById('summaryPrice').innerText = selectedPackage.price;
-            document.getElementById('summaryCurrency').innerText = selectedPackage.currency || selectedPackage.bonus;
+            document.getElementById('summaryCurrency').innerText = selectedPackage.robux;
         }
 
         function selectPaymentMethod(method) {
@@ -481,7 +472,6 @@
                 zingForm.classList.add('hidden');
             }
 
-            // Highlight selected card border
             document.querySelectorAll('.payment-method-card').forEach(card => {
                 const radio = card.querySelector('input[type="radio"]');
                 if (radio.value === method) {
@@ -529,7 +519,7 @@
             const server = document.getElementById('serverSelect').value;
             
             if (!charName.trim()) {
-                showToast('Vui lòng nhập tên nhân vật hoặc ID nhận quà!', 'error');
+                showToast('Vui lòng nhập tên người dùng hoặc ID Roblox nhận Robux!', 'error');
                 return;
             }
 
@@ -550,11 +540,11 @@
                         <i class="fa-solid fa-shield-halved animate-pulse"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-1">Xác Nhận Qua ZaloPay</h3>
-                    <p class="text-xs text-gray-400 mb-6">Đang kết nối ứng dụng ZaloPay để trừ tiền bảo mật...</p>
+                    <p class="text-xs text-gray-400 mb-6">Đang kết nối ứng dụng ZaloPay để thanh toán bảo mật...</p>
                     
                     <div class="bg-gray-900/80 p-4 rounded-xl border border-gray-800 text-left mb-6 space-y-2 text-xs">
-                        <div class="flex justify-between"><span class="text-gray-400">Gói nạp:</span> <span class="font-bold text-white">${selectedPackage.name}</span></div>
-                        <div class="flex justify-between"><span class="text-gray-400">Nhân vật:</span> <span class="font-bold text-emerald-400">${charName} (${server})</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Gói nạp:</span> <span class="font-bold text-white">${selectedPackage.name} (${selectedPackage.robux})</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Tài khoản:</span> <span class="font-bold text-emerald-400">${charName} (${server})</span></div>
                         <div class="flex justify-between"><span class="text-gray-400">Thanh toán:</span> <span class="font-bold text-vngRed">${selectedPackage.price}</span></div>
                     </div>
 
@@ -569,7 +559,7 @@
                         <p class="text-xs text-gray-400 mb-4">Sử dụng App Ngân hàng bất kỳ để quét mã</p>
                         
                         <div class="bg-white p-3 rounded-2xl w-48 h-48 mx-auto mb-4 flex items-center justify-center shadow-xl">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=VNG_PAY_${selectedPackage.rawPrice}_${charName}" class="w-full h-full object-contain" alt="QR Code">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=ROBLOX_VNG_${selectedPackage.rawPrice}_${charName}" class="w-full h-full object-contain" alt="QR Code">
                         </div>
 
                         <div class="bg-gray-900/80 p-3 rounded-xl border border-gray-800 text-left text-xs space-y-1.5 mb-4">
@@ -603,21 +593,20 @@
         function simulateSuccess() {
             closePaymentModal();
             const modalContent = document.getElementById('paymentModalContent');
-            // Show success result modal
             modalContent.innerHTML = `
                 <div class="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 animate-bounce">
                     <i class="fa-solid fa-circle-check"></i>
                 </div>
-                <h3 class="text-2xl font-extrabold text-white mb-1">Nạp Thẻ Thành Công!</h3>
-                <p class="text-xs text-gray-400 mb-6">Giao dịch đã được ghi nhận vào hệ thống VNG Games.</p>
+                <h3 class="text-2xl font-extrabold text-white mb-1">Nạp Robux Thành Công!</h3>
+                <p class="text-xs text-gray-400 mb-6">Giao dịch đã được hệ thống VNG Games xác nhận.</p>
                 
                 <div class="bg-gray-900/80 p-4 rounded-xl border border-gray-800 text-left mb-6 space-y-2 text-xs">
                     <div class="flex justify-between"><span class="text-gray-400">Gói nạp:</span> <span class="font-bold text-white">${selectedPackage.name}</span></div>
-                    <div class="flex justify-between"><span class="text-gray-400">Nhận được:</span> <span class="font-bold text-emerald-400">${selectedPackage.currency || selectedPackage.bonus}</span></div>
-                    <div class="flex justify-between"><span class="text-gray-400">Trạng thái:</span> <span class="font-bold text-emerald-400">Đã cộng vào nhân vật</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">Nhận được:</span> <span class="font-bold text-emerald-400">${selectedPackage.robux}</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">Trạng thái:</span> <span class="font-bold text-emerald-400">Đã cộng vào tài khoản Roblox</span></div>
                 </div>
 
-                <button onclick="closePaymentModal(); showToast('Đã nạp thành công vào nhân vật!');" class="w-full bg-vngRed hover:bg-red-700 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition">
+                <button onclick="closePaymentModal(); showToast('Đã cộng Robux vào tài khoản thành công!');" class="w-full bg-vngRed hover:bg-red-700 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition">
                     Hoàn Tất & Tiếp Tục
                 </button>
             `;
